@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  連結css-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="title.css">
+    <link rel="stylesheet" href="btn.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="light.css">
+    <!-- AOS連結 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+
+<body>
+    <!-- 導覽 -->
+    <nav>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="origin.html">門神起源</a></li>
+            <li><a href="form.html">門神彩繪表現形式</a></li>
+            <li><a href="door god from.html">門神形式</a></li>
+            <li><a href="painter.html">藝師介紹</a></li>
+            <li><a href="temper.html">廟宇介紹</a></li>
+
+        </ul>
+    </nav>
+    <!-- 對話 -->
+    <!-- 左 -->
+    <div class="content">
+        <div class="box">
+            <img src="https://i.imgur.com/YNONyXz.png">
+            <div class="description" data-aos="fade-right">
+                <p>
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 右 -->
+    <div class="content">
+        <div class="box2">
+            <div class="description" data-aos="fade-left">
+                <p>
+                </p>
+            </div>
+            <img src="https://i.imgur.com/ukphRDL.png">
+        </div>
+    </div>
+
+
+    <h1>HTML選擇題範例</h1>
+    <form id="quizForm">
+        <p>1. HTML代表什麼？</p>
+        <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">超文字內容標記語言</label><br>
+        <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">超文字內容項目語言</label><br>
+        <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">超級文字內容語言</label><br>
+
+        <p>2. HTML中的標籤是由哪種符號包圍的？</p>
+        <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">&lt; 和 &gt;</label><br>
+        <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">[ 和 ]</label><br>
+        <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">( 和 )</label><br>
+        <P>
+            不會嗎？<a href="#">回到主題複習</a>
+        </P>
+
+
+
+        <p>3. HTML中的標籤是由哪種符號包圍的？</p>
+        <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">&lt; 和 &gt;</label><br>
+        <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">[ 和 ]</label><br>
+        <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">( 和 )</label><br>
+
+        <input type="submit" value="提交答案">
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+        const quizForm = document.getElementById("quizForm");
+        const resultsDiv = document.getElementById("results");
+
+        quizForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const answers = {
+                q1: document.querySelector('input[name="q1"]:checked').value,
+                q2: document.querySelector('input[name="q2"]:checked').value,
+                q3: document.querySelector('input[name="q3"]:checked').value
+            };
+
+            const correctAnswers = {
+                q1: "a",
+                q2: "a",
+                q3: "b"
+            };
+
+            let score = 0;
+
+            for (const question in answers) {
+                if (answers[question] === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            resultsDiv.innerHTML = `恭喜！你得分為：${score} / 3`;
+        });
+    </script>
+
+
+    <!-- 改成燈箱 -->
+    <h4>網頁使用說明</h4>
+    <!-- 下滑產生對話 -->
+    <div class="content">
+        <div class="box3">
+            <div class="description">
+                <p>下滑產生對話</p>
+            </div>
+            <img data-aos="flip-left" src="D:\[HTML]\圖片\其他\giphy.gif">
+        </div>
+    </div>
+    <!-- 點擊選項跳轉 -->
+    <div class="content">
+        <div class="box3">
+            <div class="description">
+                <p>選擇你的問題，點擊選項跳轉頁面</p>
+            </div>
+            <img data-aos="flip-left" src="D:\[HTML]\圖片\其他\giphy.gif">
+        </div>
+    </div>
+    <!-- 註釋 -->
+    <div class="content">
+        <div class="box3">
+            <div class="description">
+                <p> 點擊紅色粗體字查看註釋</p>
+                <p href="javascript:void(0)" id="linkbt"><b class="btn01">可以測試看看喔！</b></p>
+            </div>
+            <img data-aos="flip-left" src="D:\[HTML]\圖片\其他\螢幕擷取畫面 (277).png">
+        </div>
+    </div>
+    <!-- 註釋測試 -->
+    <div id="light">
+        <h5>測試</h5>
+        <p>在此顯示註解 </p>
+        <p><a href="javascript:void(0)" id="closebt" class="close-btn">了解了，關閉視窗</h3></a>
+    </div>
+    <div id="fade"></div>
+
+    <!-- 介紹 -->
+    <div class="content">
+        <div class="box3">
+            <div class="description">
+                <p>點擊<a class="btn02" href="#">藍色粗體字</a>前往介紹</p>
+            </div>
+            <img data-aos="flip-left" src="D:\[大學]資料\作業\[四上]\場景設計\當代\Zicxa Photos.jpg">
+        </div>
+    </div>
+
+    <!-- 導覽-->
+    <div class="content">
+        <div class="box3">
+            <div class="description">
+                <p>點擊最上欄導覽直接前往介紹</p>
+            </div>
+            <img data-aos="flip-left" src="D:\[HTML]\圖片\其他\螢幕擷取畫面 (277).png">
+        </div>
+    </div>
+
+
+</body>
+
+</html>

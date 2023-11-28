@@ -1,0 +1,231 @@
+/* 先移除掉預設的值、空格 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 樣式基礎 */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    background-image: url("D:\[大學]資料\作業\專題\03素材圖片\01門神轉譯\服飾圖紋\插圖.png");
+}
+
+/* 媒體查詢 */
+@media (max-width: 768px) {
+    /* 适应小屏幕 */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* 适应中等屏幕 */
+}
+
+@media (min-width: 1025px) {
+    /* 适应大屏幕 */
+}
+
+
+/* 釋義 */
+.definition {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    grid-gap: 30px;
+    margin: 60px 10%;
+    line-height: 28px;
+
+}
+
+.definition p {
+    padding: 25px 0;
+}
+
+/* 置中說明文字 */
+.f {
+    margin: 50px 15%;
+    line-height: 28px;
+}
+
+.f p {
+    margin: 0 0 0 30px;
+}
+
+/* 對話+說明容器' */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 400px;
+    background-color: #7c7c7c;
+}
+
+/* 頭像+對話框_左 */
+.box {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-gap: 30px;
+}
+
+/* 對話框 */
+.box p {
+    margin: 0 10px;
+    font-size: 18px;
+    text-align: left;
+    border: 2px;
+    border-radius: 15px;
+    padding: 20px 20px;
+    background-color: rgb(228, 221, 198)
+}
+
+.box img {
+    width: 100%;
+    max-width: 100px;
+}
+
+/* 頭像+對話框_右*/
+.box2 {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-gap: 30px;
+}
+
+/* 對話框_右 */
+.box2 p {
+    margin: 0 10px;
+    padding: 30px 20px;
+    font-size: 18px;
+    border: 2px;
+    border-radius: 15px;
+    background-color: #ebbd68;
+    color: #fff;
+    text-align: right;
+}
+
+/* 頭像_右*/
+.box2 img {
+    width: 100%;
+    max-width: 100px;
+    min-width: 58.368px;
+}
+
+/* 對話框選項_右 */
+.box2 li {
+    margin: 10px 10px;
+    padding: 10px 10px;
+    font-size: 18px;
+    text-align: right;
+    list-style-type: none;
+    text-decoration: none;
+    border: 2px;
+    border-radius: 15px;
+    background-color: rgb(216, 122, 34)
+}
+
+/* 對話框細節選項_右 */
+.box2 Options {
+    flex-direction: column;
+    margin: 10px 10px;
+    padding: 20px 20px;
+    font-size: 18px;
+    text-align: right;
+    list-style-type: none;
+    text-decoration: none;
+    border: 2px;
+    border-radius: 15px;
+    background-color: rgb(216, 122, 34);
+}
+
+/* 對話框細節選項超連結_右 */
+.box2 a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* 空白 */
+span {
+    padding: 10px;
+    display: grid;
+}
+
+
+/* 使用說明 */
+.box3 {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 30px;
+}
+
+/* 使用說明文字 */
+.box3 p {
+    font-size: 18px;
+    text-align: left;
+    border: 2px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255)
+}
+
+/* 使用說明圖片 */
+.box3 img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 40px;
+}
+
+/* 內容外框 */
+.content {
+    margin: 60px 20%;
+    min-width: 400px;
+
+}
+
+.content p {
+    margin: 30px 0;
+}
+
+
+/* 圖片輪播 */
+/* 樣式用於包裝圖像容器 */
+.slider-container {
+    padding: 50px 100px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    background-image: url("picture/新增資料夾/紅木.jpg");
+    background-size: cover;
+
+}
+
+/* 樣式用於圖像滑動區域 */
+.slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    /* 100%寬度以填充容器 */
+}
+
+/* 樣式用於每張滑動的圖像 */
+.slide {
+    max-height: 500px;
+    min-width: 40%;
+    min-height: 40%;
+    flex: 0 0 100%;
+    /* 圖像高度自動調整 */
+}
+
+.f {
+    margin: 50px 20%;
+    font-size: large;
+    line-height: 40px;
+}
+
+.img {
+    height: 25%;
+    width: 25%;
+}
