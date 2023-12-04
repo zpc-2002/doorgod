@@ -1,69 +1,38 @@
-/* 特效按鈕 */
-.choose {
-    height: 600px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: rgb(226, 139, 139);
-}
-
-.btn2 {
-    width: 100px;
-    height: 300px;
-    border: none;
-    border-radius: 10px;
-    color: rgb(45, 48, 48);
-    background-color: #ffd484;
-    font-size: 20px;
-
-    transition: 0.5s ease-in;
-    /* 動畫部分 */
+button {
     z-index: 1;
-
-    writing-mode: vertical-lr;
-    /* 從右向左的垂直書寫模式 */
-    text-orientation: upright;
-    /* 文字方向保持垂直 */
-    white-space: nowrap;
-    /* 防止文字自動換行 */
-    transform: none;
-    text-align: center;
-    /* 文字水平居中 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* 使文本垂直居中 */
     position: relative;
-}
-
-.btn2 a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #fff;
-}
-
-.btn2:hover {
-    color: #f7be21;
-    /* 滑鼠手指 */
-    cursor: pointer;
-}
-
-.btn2::before {
-    background-color: #5f0a0a;
-    content: "";
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    background-color: hsl(236, 32%, 26%);
+  }
+  
+  button::before {
+    content: '';
+    z-index: -1;
     position: absolute;
     top: 0;
-    left: 50%;
-    right: 50%;
     bottom: 0;
-    transition: 0.5s all ease;
-}
-
-.btn2:hover::before {
-    transition: 0.5s all ease;
-    left: 0%;
+    left: 0;
     right: 0;
-    z-index: -1;
-    border-radius: 10px;
-}
+    background-color: #fc2f70;
+    transform-origin: center bottom;
+    transform: scaleY(0);
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  button:hover::before {
+    transform-origin: center top;
+    transform: scaleY(1);
+  }
+  button a{
+    text-decoration: none;
+    color: #fff;
+  }

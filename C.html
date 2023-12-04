@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  連結css-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="title.css">
+    <link rel="stylesheet" href="btn.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="light.css">
+    <!-- AOS連結 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <title>開始</title>
+</head>
+
+<style>
+    .btncontainer {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        /* 弹性布局 居中显示 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 允许换行 */
+        flex-wrap: wrap;
+    }
+
+    .card {
+        position: relative;
+        width: 150px;
+        height: 300px;
+        margin: 10px;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        color: #f5f5f5;
+        /* 阴影 */
+        box-shadow: 0 1px 1px rgba(187, 148, 77, 0.685),
+            0 2px 2px rgba(0, 0, 0, 0.1),
+            0 4px 4px rgba(0, 0, 0, 0.1),
+            0 8px 8px rgba(0, 0, 0, 0.1),
+            0 16px 16px rgba(0, 0, 0, 0.1);
+        /* 溢出隐藏 */
+        overflow: hidden;
+    }
+
+    .card::before {
+        content: "";
+        width: 100%;
+        height: 110%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* background-image: url(/images/139/1.jpg); */
+        background-size: cover;
+        background-position: 0 0;
+        /* 过渡效果: css属性名 时长 贝塞尔曲线 */
+        transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    /* 分别设置图片 */
+    .card:nth-child(1)::before {
+        background-image: url(/images/139/1.jpg);
+    }
+
+    .card:nth-child(2)::before {
+        background-image: url(/images/139/2.jpg);
+    }
+
+    .card:nth-child(3)::before {
+        background-image: url(/images/139/3.jpg);
+    }
+
+    .card:nth-child(4)::before {
+        background-image: url(/images/139/4.jpg);
+    }
+
+    .card:nth-child(5)::before {
+        background-image: url(/images/139/5.jpg);
+    }
+
+    /* 遮罩 */
+    .card::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 200%;
+        background: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 0.25) 55%,
+                rgba(0, 0, 0, 0.8) 100%);
+        /* 绝对定位 */
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(0);
+        /* 过渡效果 */
+        transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .card .btncontent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        padding: 16px 8px;
+        transform: translateY(60%);
+        transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .card h5 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .card a {
+        font-size: 12px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #fff;
+
+    }
+
+    .card p {
+        font-size: 15px;
+        /* 字间距 */
+        letter-spacing: 2px;
+        width: 80%;
+        line-height: 30px;
+        margin-top: 50px;
+        /* 文本两端对齐 */
+        text-align: justify;
+    }
+
+    .card button {
+        cursor: pointer;
+        border: none;
+        background-color: rgba(253, 144, 72, 0.5);
+        color: #fff;
+        padding: 12px 24px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 25px;
+    }
+
+    .card button:hover {
+        background-color: #000;
+    }
+
+    .card .btncontent *:not(h5) {
+        /* .btncontent下，除了h5，其他元素隐藏并下移20px */
+        opacity: 0;
+        transform: translateY(20px);
+        transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .card:hover {
+        align-items: center;
+    }
+
+    .card:hover::before {
+        transform: translateY(-5%);
+    }
+
+    .card:hover::after {
+        transform: translateY(-50%);
+    }
+
+    .card:hover .btncontent {
+        transform: translateY(0);
+    }
+
+    .card:hover .btncontent *:not(h5) {
+        opacity: 1;
+        transform: translateY(0);
+        /* 过渡效果延迟 */
+        transition-delay: 0.1s;
+    }
+</style>
+<body>
+    <script>
+        // 下滑動畫
+        AOS.init({
+            // 期間為單位的動畫效果
+            duration: 1500.
+        });
+    </script>
+     <ul class="shell">
+        <li class="button">
+            <span ><a href="index.html">首頁</a></span>
+        </li>
+        <li class="button">
+            <span><a href="origin.html">門神起源與介紹</a></span>
+            <ul>
+                <li><a href="doorgod_Buddhism.html">佛教門神</a></li>
+                <li><a href="doorgod_Taoism.html">道教門神</a></li>
+                <li><a href="doorgod_other.html">次間、其他門神</a></li>
+            </ul>
+        </li>
+    
+        <li class="button">
+            <span><a href="form.html">門神彩繪表現形式</a></span>
+            <ul>
+                <li ><a href="form.html #choose01">木雕門神</a></li>
+                        <li><a href="form.html #choose06">畫軸門神</a></li>
+                        <li><a href="form.html #choose07">版畫門神</a></li>
+                        <li ><a href="form.html #choose09">門板彩繪門神</a></li>
+            </ul>
+        </li>
+        <li class="button">
+            <span><a href="door god from.html #doorgodfrom">門神形式</a></span>
+            <ul>
+                <li><a href="door god from.html #choose01">
+          門神位序配置
+                </a></li>
+                <li> <a href="door god from.html #choose02">
+                    <h5>門神的構圖比例</h5>
+                </a></li>
+                <li>  <a href="door god from.html #choose03">
+                  門神的頭身比例
+                </a></li>
+                <li><a href="door god from.html #choose04">
+                   門神的面部
+                </a></li>
+                <li><a href="door god from.html #choose05">
+                    <h5>門神的手勢</li>
+                <li><a href="door god from.html #choose06">
+                    門神的服飾</li>
+            </ul>
+        </li>
+        <li class="button">
+            <span><a href="painting process.html ">門神彩繪施作</a></span>
+            <ul>
+                <li class="Options"><a href="painting process.html #choose01">木雕門神</a></li>
+                <li class="Options"><a href="painting process.html #choose07">版畫門神</a></li>
+                <li class="Options"><a href="painting process.html #choose09">門板彩繪門神</a></li>
+            </ul>
+        </li>
+        <li class="button">
+            <span><a href="temper.html">廟宇介紹</a></span>
+            <ul>
+                <li><a href="temper.html #choose01">北港朝天宮</a></li>
+                <li><a href="temper.html #choose02">北港鎮安宮</a></li>
+                <li><a href="temper.html #choose03">北港義民廟</a></li>
+                <li><a href="temper.html #choose04">北港昭烈宮</a></li>
+                <li><a href="temper.html #choose05">北港武德宮</a></li>
+                <li><a href="#choose06">北港復興宮</a></li>
+                <li><a href="temper.html #choose07">扶朝五福宮</a></li>
+                <li><a href="temper.html #choose08">北港代天宮</a></li>
+                <li><a href="temper.html #choose09">北港巡安宮臨水夫人廟</a></li>
+                <li><a href="temper.html #choose10">北壇碧水寺</a></li>
+                <li><a href="temper.html #choose11">北港濟世宮</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="content">
+        <div class="box2">
+            <img src="https://i.imgur.com/ukphRDL.png">
+            <div class="description" data-aos="fade-left">
+                <p>
+                    哈哈哈……
+            </div>
+
+        </div>
+
+
+        <div class="box2">
+            <img src="https://i.imgur.com/ukphRDL.png">
+            <div class="description" data-aos="fade-left">
+                <p>
+                    抱歉讓你久等了，一不小心就提早下公車了{{{(>_<)}}} </p>
+            </div>
+        </div>
+
+
+
+        <div class="box">
+            <img src="https://i.imgur.com/YNONyXz.png">
+            <div class="description" data-aos="fade-right">
+                <p>
+                    沒關係，第一次來陌生的地方不習慣是正常的啦！
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="box2">
+            <img src="https://i.imgur.com/ukphRDL.png">
+            <div class="description" data-aos="fade-left">
+                <div class="description" data-aos="fade-left">
+                    <p>
+                        不過今天來北港是要做什麼啊？ </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="https://i.imgur.com/YNONyXz.png">
+            <div class="description" data-aos="fade-right">
+                <p>
+                    你上次不是說要來看北港廟宇門神，順便吃美食嗎？
+                </p>
+            </div>
+        </div>
+
+        <div class="box2">
+            <img src="https://i.imgur.com/ukphRDL.png">
+            <div class="description" data-aos="fade-left">
+                <div class="description" data-aos="fade-left">
+                    <p>
+                        啊對！ </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box2">
+            <img src="https://i.imgur.com/ukphRDL.png">
+            <div class="description" data-aos="fade-left">
+                <div class="description" data-aos="fade-left">
+                    <p>
+                        糖廠！冰餅！冰棒！冰淇淋！ </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="https://i.imgur.com/YNONyXz.png">
+            <div class="description" data-aos="fade-right">
+                <p>
+                    。。。。。。
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="https://i.imgur.com/YNONyXz.png">
+            <div class="description" data-aos="fade-right">
+                <p>
+                    你的目的是吃冰對吧？
+                    <br>難怪約在總站，那我們先逛逛再到糖廠吃冰吧？
+                </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="https://i.imgur.com/YNONyXz.png">
+            <div class="description" data-aos="fade-right">
+                <p>
+                    那麼在我們出發之前，有需要我先介紹門神相關的知識嗎？
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="btncontainer" id="choose">
+        <div class="card">
+            <div class="btncontent">
+                <h5>不用，我想直接參觀廟宇</h5>
+                <p>北港廟宇與實際門神介紹。</p>
+                <button><a href="temper.html">進入頁面</a></button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="btncontent">
+                <h5>這裡的門神都是怎麼做的啊？</h5>
+                <p>門神彩繪表現形式種類介紹</p>
+                <button><a href="form.html">進入頁面</a></button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="btncontent">
+                <h5>想認識有哪些門神</h5>
+                <p>門神起源與常見門神介紹</p>
+                <button><a href="origin.html">進入頁面</a></button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="btncontent">
+                <h5>門神形象畫<br>
+                    畫起來都差不多嗎？</h5>
+                <p> 門神人物配置及形象介紹</p>
+                <button><a href="door god from.html">進入頁面</a></button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="btncontent">
+                <h5>門神畫都是怎麼畫的</h5>
+                <p>門神彩繪流程介紹</p>
+                <button> <a href="painting process.html">進入頁面</a></button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
