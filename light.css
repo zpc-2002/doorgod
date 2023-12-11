@@ -1,5 +1,6 @@
 .light{
-    margin: 30px 0;
+    margin: 30px auto;
+    
 }
 .light b{
     padding: 5px;
@@ -79,4 +80,8 @@
     text-decoration: none;
     font-weight: bold;
 }
+
+
+
+
 

@@ -9,12 +9,13 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
-    background-image: url();
+    background-image: url("picture/對話頭貼/背景2.png");
+    background-size: contain;
 
 }
 
 /* 媒體查詢 */
-@media (max-width: 320px) {
+@media (min-width: 320px)and (max-width: 499px) {
 
     /* 适应小屏幕 */
     h1 {
@@ -36,15 +37,63 @@ body {
     p {
         font-size: 0.8rem;
     }
+
     img {
         width: 80%;
         height: 80%;
     }
-    nav a{
-        font-size: 0.8rem; 
+
+    nav a {
+        font-size: 0.8rem;
     }
-  
+
+    .box img {
+        max-width: 75px;
+        max-height: 75px;
+    }
+
+    .box2 img {
+        max-width: 75px;
+        max-height: 75px;
+    }
+    /* 釋義 */
+.definition {
+    display: grid;
+    grid-gap: 10px;
+    line-height: 28px;
+    border: 3px;
+    background-color: #f2ede3;
+    padding: 30px;
+    margin: 60px auto;
+    border-radius: 15px;
+    min-height: 400px;
 }
+
+.definition p {
+    line-height: 30px;
+    margin: 30px auto;
+}
+
+.definition img {
+height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+
+.definitionimg {
+    max-width: 1000px;
+    margin: 100px auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+.definitionimg img{
+    width: 100%;
+}
+
+}
+
 
 @media (min-width: 500px) and (max-width: 767px) {
 
@@ -73,12 +122,66 @@ body {
         width: 80%;
         height: 80%;
     }
-    nav a{
-        font-size: 1rem;; 
+
+    nav a {
+        font-size: 1rem;
+        ;
     }
+
+    .box img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .box2 img {
+        width: 90px;
+        height: 90px;
+    }
+
+/* 釋義 */
+.definition {
+    display: grid;
+
+    grid-gap: 10px;
+    line-height: 28px;
+    border: 3px;
+    background-color: #f2ede3;
+    padding: 30px;
+    margin: 60px 10%;
+    border-radius: 15px;
+    min-height: 400px;
 }
 
-@media (min-width: 1025px) {
+.definition p {
+
+    line-height: 30px;
+    margin: 30px auto;
+}
+
+.definition img {
+
+    width: 90%;
+}
+
+
+.definitionimg {
+    max-width: 1000px;
+    margin: 100px auto;
+    
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+.definitionimg img{
+    width: auto;
+    height: auto;
+    align-items: center;
+}
+
+}
+
+
+
+@media (min-width: 768px) {
 
     /* 适应大屏幕 */
     h1 {
@@ -100,36 +203,78 @@ body {
     p {
         font-size: 1.2rem;
     }
+
+    .box img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .box2 img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+
+   
+/* 釋義 */
+.definition {
+    display: grid;
+    grid-template-columns: 2fr 3fr ;
+    grid-gap: 10px;
+    line-height: 28px;
+    border: 3px;
+    background-color: #f2ede3;
+    padding: 30px;
+    margin: 60px 10%;
+    border-radius: 15px;
+    min-height: 400px;
+}
+
+.definition p {
+    line-height: 30px;
+    margin: 30px auto;
+}
+
+.definition img {
+
+    width: 90%;
 }
 
 
-/* 置中說明文字 */
-.f {
-    max-width: 800px;
-    min-width: 250px;
-    line-height: 50px;
+.definitionimg {
+    display: grid;
+    margin: 100px 10%;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    margin: 100px auto;
-    padding: 0 20px;
+}
+.definitionimg img{
+    width: auto;
+    height: auto;
+}
+
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
 }
 
 
 
-
-/* 下拉導覽葉 */
-.shell{
+/* 下拉導覽頁 */
+.shell {
     position: sticky;
     top: 0;
     z-index: 10;
-    padding: 10px 0;
-
     width: 100%;
-    margin: auto auto;
-
     display: flex;
-    
+    padding: auto 10px;
+    background-color: #ffd07a;
+    margin: auto;
 }
-.button,.portrait{
+
+.button,
+.portrait {
     background-color: #ffd07a;
     width: 170px;
     height: 65px;
@@ -139,109 +284,114 @@ body {
     cursor: pointer;
     justify-content: center;
 }
-.portrait::before{
+
+.portrait::before {
     content: '';
     display: block;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    transform: translate(30px,-30px);
+    transform: translate(30px, -30px);
     background-image: url('./portrait.png');
     background-size: cover;
     border: 10px solid #fff;
 }
-.information{
+
+.information {
     width: 220px;
     background-color: #e07a5f;
-    transform: translate(-20px,-200px);
+    transform: translate(-20px, -200px);
     border-radius: 10px;
     padding: 20px 0;
     line-height: 0;
     height: 0;
     transition: .3s;
     opacity: 0;
-    
+
 }
-.button:hover{
+
+.button:hover {
     background-color: #d15a39;
 }
-.button li:hover{
+
+.button li:hover {
     background-color: #ffb29d;
 }
-.button ul li{
+
+.button ul li {
     height: 0;
     transition: .2s;
     opacity: 0;
     transform: translateY(-65px);
     background-color: #e07a5f;
+    margin: 0 10px;
 }
-.button:hover li{
+
+.button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.button:hover li {
     height: 65px;
     opacity: 1;
     transform: translateY(0);
 }
-.portrait:hover .information{
+
+.portrait:hover .information {
     opacity: 1;
     line-height: 65px;
-    transform: translate(-20px,-10px);
+    transform: translate(-20px, -10px);
     height: auto;
 }
 
 
 
-
-
-
-/* 釋義 */
-.definition {
-    display: grid;
-    grid-template-columns: 5fr 4fr;
-    grid-gap: 30px;
-    line-height: 28px;
-    border: 3px;
-    background-color: #f2ede3;
-    padding: 30px;
-    margin: 60px 10%;
-    border-radius: 15px;
+.f {
+    max-width: 800px;
+    min-width: 250px;
+    line-height: 50px;
+    margin: 100px auto;
+    padding: 20px 30px;
+    align-items: center;
+    background-color: #faf8f3;
 }
-
-.definition p {
-    padding: 25px 0;
+.f p{
+    padding: 20px;
 }
-
-.definition img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-}
-
 
 
 
 /* 內容外框 */
-
 .container {
+    margin: 50px auto;
     max-width: 800px;
     min-width: 250px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    min-height: 400px;
-    background-color: #7c7c7c;
+    height: auto;
+    padding: 50px 20px;
 }
 
 /* 對話+說明容器' */
 .content {
-    margin: 100px auto;
+    margin: 30px auto;
     max-width: 800px;
     min-width: 250px;
-    padding: 0 20px;
+    height: auto;
+    padding: 50px 20px;
+    background-color: #faf8f3;
+    /* background-image: url("picture/對話頭貼/背景.png"); */
+    border: 0.2em solid #bb4120;
+    border-radius: 15px;
+}
+
+.content p {
+    margin: 100px 5%;
+    line-height: 30px;
 }
 
 /* 頭像+對話框_左 */
 .box {
-    margin: 60px auto;
+    margin: 50px auto;
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-gap: 20px;
@@ -258,16 +408,9 @@ body {
     background-color: rgb(221, 214, 205)
 }
 
-.box img {
-   max-width: 70px;
-    max-height: 70px;
-    width: auto;
-    height: auto;
-}
-
 /* 頭像+對話框_右 */
 .box2 {
-    margin: 60px auto;
+    margin: 50px auto;
     display: grid;
     grid-template-columns: 6fr 1fr;
     grid-gap: 20px;
@@ -283,44 +426,28 @@ body {
     border-radius: 15px;
     padding: 20px 5%;
     background-color: rgb(240, 150, 47);
+    color: #fff;
     margin-left: 30px;
 
 }
-
-.box2 img {
-    width: 100%;
-    max-width: 70px;
-    height: 100%;
-    max-height: 70px;
-}
-
-
-
 
 
 /* 對話框選項_右 */
 .box2 li {
     margin: 10px 10px;
-    padding: 10px 10px;
-    text-align: right;
-    list-style-type: none;
-    text-decoration: none;
+    text-align: left;
     border: 2px;
     border-radius: 15px;
-    background-color: rgb(216, 122, 34)
-}
-
-/* 對話框細節選項_右 */
-.box2 Options {
-    display: grid;
-
-
+    padding: 20px 5%;
+    background-color: rgb(240, 150, 47);
+    margin-left: 30px;
+    list-style-type: none;
+    text-decoration: none;
 }
 
 /* 對話框細節選項超連結_右 */
 .box2 a {
-    list-style-type: none;
-    text-decoration: none;
+    font-size: large;
     color: #fff;
 }
 
@@ -328,46 +455,17 @@ body {
 
 
 
-/* 圖片輪播 */
-/* 樣式用於包裝圖像容器 */
-.slider-container {
-    padding: 50px auto;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    text-align: center;
-    background-image: url("");
-    background-color: #c44747;
-    background-size: cover;
-
-}
-
-/* 樣式用於圖像滑動區域 */
-.slider {
-    display: flex;
-    transition: transform 1s ease-in-out;
-    width: 100vw;
-    align-items: center;
-
-    /* 100%寬度以填充容器 */
-}
-
-/* 樣式用於每張滑動的圖像 */
-.slide {
-    height: auto;
-    width: auto;
-    flex: 0 0 100%;
-    /* 圖像高度自動調整 */
-    height: 25%;
-    width: 25%;
-    padding: auto;
-}
-
-
 /* 選擇題 */
 .mcq {
-    margin: 60px 20%;
-    min-width: 400px;
+    margin: 30px auto;
+    max-width: 800px;
+    min-width: 250px;
+    height: auto;
+    padding: 50px 20px;
+    background-color: #faf8f3;
+    /* background-image: url("picture/對話頭貼/背景.png"); */
+    border: 0.2em solid #ffffff;
+    border-radius: 15px;
 }
 
 .mcq input {

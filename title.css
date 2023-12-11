@@ -1,45 +1,15 @@
-/* 導覽頁 */
-nav {
-    /* 固定在上排 */
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    padding: 10px 0;
-    background-color: #ffd07a;
-    width: 100%;
-    margin: auto auto;
-} 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    z-index: 10;
-}
-nav li {
-    margin: 0 10px;
-    background-color: #bb4120;
-    color: #fff;
-    padding: 5px;
-    border-radius: 10px;
-}
-nav a {
-    text-decoration: none;
-    color: #fff;
-}
 
 header{
     text-align: center;
     align-items: center;
-    background-image: url("");
-    height: 300px;
+    background-image: url("picture/首頁/紅木01.jpg");
+    height: 70vh;
+    padding-top: 150px;
+    color: #fff;
 
 }
-header h1{
-    justify-content: center;
-    align-items: center;
-    padding: auto;
-}
+
+
 /* 標題2 */
 h2 {
     color: #333;

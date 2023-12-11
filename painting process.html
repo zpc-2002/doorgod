@@ -17,6 +17,24 @@
     <title>繪畫施作過程</title>
 </head>
 
+<script type="text/javascript">
+    // 彈跳視窗
+    window.onload = function () {
+        var linkbt = document.getElementById("linkbt");
+        var light = document.getElementById('light');
+        var fade = document.getElementById('fade');
+        var closebt = document.getElementById("closebt");
+        linkbt.onclick = function () {
+            light.style.display = 'block';
+            fade.style.display = 'block';
+        }
+        closebt.onclick = function () {
+            light.style.display = 'none';
+            fade.style.display = 'none';
+        }
+    }
+</script>
+
 <body>
     <script>
         // 下滑動畫
@@ -25,88 +43,69 @@
             duration: 1500.
         });
     </script>
-  <ul class="shell">
-    <li class="button">
-        <span ><a href="index.html">首頁</a></span>
-    </li>
-    <li class="button">
-        <span><a href="origin.html">門神起源與介紹</a></span>
-        <ul>
-            <li><a href="doorgod_Buddhism.html">佛教門神</a></li>
-            <li><a href="doorgod_Taoism.html">道教門神</a></li>
-            <li><a href="doorgod_other.html">次間、其他門神</a></li>
-        </ul>
-    </li>
+    <ul class="shell">
+        <li class="button">
+            <span><a href="index.html">首頁</a></span>
+        </li>
+        <li class="button">
+            <span><a href="origin.html">門神起源與介紹</a></span>
+            <ul>
+                <li><a href="doorgod_Taoism.html">道教門神</a></li>
+                <li><a href="doorgod_Buddhism.html">佛教門神</a></li>
+                <li><a href="doorgod_other.html">次間、其他門神</a></li>
+            </ul>
+        </li>
 
-    <li class="button">
-        <span><a href="form.html">門神彩繪表現形式</a></span>
-        <ul>
-            <li ><a href="form.html #choose01">木雕門神</a></li>
-                    <li><a href="form.html #choose06">畫軸門神</a></li>
-                    <li><a href="form.html #choose07">版畫門神</a></li>
-                    <li ><a href="form.html #choose09">門板彩繪門神</a></li>
-        </ul>
-    </li>
-    <li class="button">
-        <span><a href="door god from.html #doorgodfrom">門神形式</a></span>
-        <ul>
-            <li><a href="door god from.html #choose01">
-      門神位序配置
-            </a></li>
-            <li> <a href="door god from.html #choose02">
-                <h5>門神的構圖比例</h5>
-            </a></li>
-            <li>  <a href="door god from.html #choose03">
-              門神的頭身比例
-            </a></li>
-            <li><a href="door god from.html #choose04">
-               門神的面部
-            </a></li>
-            <li><a href="door god from.html #choose05">
-                <h5>門神的手勢</li>
-            <li><a href="door god from.html #choose06">
-                門神的服飾</li>
-        </ul>
-    </li>
-    <li class="button">
-        <span><a href="painting process.html ">門神彩繪施作</a></span>
-        <ul>
-            <li class="Options"><a href="painting process.html #choose01">木雕門神</a></li>
-            <li class="Options"><a href="painting process.html #choose07">版畫門神</a></li>
-            <li class="Options"><a href="painting process.html #choose09">門板彩繪門神</a></li>
-        </ul>
-    </li>
-    <li class="button">
-        <span><a href="temper.html">廟宇介紹</a></span>
-        <ul>
-            <li><a href="temper.html #choose01">北港朝天宮</a></li>
-            <li><a href="temper.html #choose02">北港鎮安宮</a></li>
-            <li><a href="temper.html #choose03">北港義民廟</a></li>
-            <li><a href="temper.html #choose04">北港昭烈宮</a></li>
-            <li><a href="temper.html #choose05">北港武德宮</a></li>
-            <li><a href="#choose06">北港復興宮</a></li>
-            <li><a href="temper.html #choose07">扶朝五福宮</a></li>
-            <li><a href="temper.html #choose08">北港代天宮</a></li>
-            <li><a href="temper.html #choose09">北港巡安宮臨水夫人廟</a></li>
-            <li><a href="temper.html #choose10">北壇碧水寺</a></li>
-            <li><a href="temper.html #choose11">北港濟世宮</a></li>
-        </ul>
-    </li>
-</ul>
+        <li class="button">
+            <span><a href="form.html">門神彩繪表現形式</a></span>
+            <ul>
+                <li><a href="form.html #choose01">門板彩繪門神</a></li>
+                <li><a href="form.html #choose02">木雕門神</a></li>
+                <li><a href="form.html #choose03">版畫門神</a></li>
+            </ul>
+        </li>
+        <li class="button">
+            <span><a href="door god from.html">門神形式</a></span>
+            <ul>
+                <li><a href="door god from.html #choose01">
+                        位序配置
+                    </a></li>
+                <li> <a href="door god from.html #choose02">
+                        構圖比例
+                    </a></li>
+                <li> <a href="door god from.html #choose03">
+                        人像比例
+                    </a></li>
+        
+            </ul>
+        </li>
+        <li class="button">
+            <span><a href="painting process.html ">門神彩繪施作</a></span>
+        </li>
+        <li class="button">
+            <span><a href="temple.html">廟宇介紹</a></span>
+
+        </li>
+    </ul>
     <div class="content">
         <div class="box2">
-            <img src="https://i.imgur.com/ukphRDL.png">
+            <img src="picture/對話頭貼/R.png">
             <div class="description" data-aos="fade-left">
                 <p>
-                    我印象中常見的就是門板彩繪門神，不過每間廟的繪畫風格都有些差異。
-                    <br>他們都是用一樣的方式畫門神嗎？還是因為地區而有不同差異？
+                    我印象中常見的就是門板彩繪門神，不過每間廟的畫風都不一樣。
                 </p>
             </div>
-            <span></span>
         </div>
-
+        <div class="box2">
+            <img src="picture/對話頭貼/R.png">
+            <div class="description" data-aos="fade-left">
+                <p>
+                    他們都是用一樣的方式畫門神嗎？還是不同地區會有有不同差異？
+                </p>
+            </div>
+        </div>
         <div class="box">
-            <img src="https://i.imgur.com/YNONyXz.png">
+            <img src="picture/對話頭貼/L.png">
             <div class="description" data-aos="fade-right">
                 <p>
                     傳統的門神彩繪施作過程大致可分為打地仗、起稿、安金、上彩等四大階段
@@ -115,111 +114,98 @@
             </div>
         </div>
         <div class="box">
-            <img src="https://i.imgur.com/YNONyXz.png">
+            <img src="picture/對話頭貼/L.png">
             <div class="description" data-aos="fade-right">
                 <p>
-                    施作方式與流程也伴隨各個藝師的<b>師承流派</b>、<b>現代材料進步</b>，以及<b>因應工期</b>而有所不同與改變。
+                    施作方式和流程也因為各個藝師的<b>學習的流派</b>、<b>現代材料進步</b>，或是<b>製作需求時間</b>而有所不同與改變。
                 </p>
             </div>
         </div>
+
+    </div>
+    <h4>彩與繪</h4>
+    <div class="definition">
         <div>
-            <h4>彩與繪</h4>
-            <p>「彩」泛指針對木構件的前期處理，包含木構件的檢查、清理、填補，及灰、塗料打底之工序，也稱作「裱門板」
-                <br>「繪」則是包含起稿、安金、上彩等階段的作畫流程。
+            <p>「彩」指的是針對木構件的前期處理，包含木構件的檢查、清理、填補，及灰料、塗料打底的工作，也稱作「裱門板」
+                <br>而「繪」是包含起稿、安金、上彩等階段的作畫流程。
             </p>
         </div>
+    </div>
+    <h4>木材選擇</h4>
+    <div class="definition">
         <div>
-            <h4>木材選擇</h4>
+            <p >
+                寺廟門神的木材部分稱作<b href="javascript:void(0)" id="linkbt" class="btn01">「厚料」</b>，臺灣有扁柏及紅檜，或是選用出產自福州的福杉木。
+                <br>在建造寺廟前一至兩年就要事先購買，放置在通風處自然乾燥，如果前置作業做得好的話，木板可以維持一到兩百年。
+            </p>
+        </div>
+        <img src="picture/施作順序/台灣扁柏.jpg">
+    </div>
+    <div id="light">
+        <h2>「厚料」</h2>
+        <p>如果是選用臺灣木，則以香氣濃郁、防蟲性高，且不易腐朽的扁柏及紅檜為多
+            <br>但大多選用出產自福州的福杉木，特性是容易加工處理，耐久及耐腐性也高，木材本身不易開裂、變形，且福州杉繁殖容易，較無病蟲害。
+            在修復上，修復團隊會採用握釘力較高的南松木作為門軸。
+        </p>
+        <p><a href="javascript:void(0)" id="closebt" class="close-btn">了解了，關閉視窗</a></P>
+    </div>
+    <div id="fade"></div>
+    <h4>打地仗（披麻捉灰）</h4>
+    <div class="definition">
+        <div>
             <p>
-                寺廟門神的木材部分稱作「<b href="javascript:void(0)" id="linkbt">厚料」</b>，臺灣有扁柏及紅檜，或是選用出產自福州的福杉木。
-                <br>在建造寺廟前一至兩年需事先購買，放置通風處自然乾燥，因此若處理得當，木板可維持一到兩百年。
+                <br>地仗層是木材表面與表層油漆間的基層。
+                而打地仗這個階段主要是為了保證木板的光滑平整，讓油灰滲入木料，防止木材的隙縫和裂痕處造成的不平整影響到作畫。
+                <br>還有預防蟲害、增加木構件的使用年限與保護性，也避免因天氣溫溼度的變化或木構件本身的劣化而造成結構不穩定，同時，也可以使油漆有更好的附著力。
             </p>
         </div>
-        <!-- 註釋測試 -->
-        <div id="light">
-            <h2>《網頁使用說明》</h2>
-            <p>如果是選用臺灣木，則以香氣濃郁、防蟲性高，且不易腐朽的扁柏及紅檜為多，但大多選用出產自福州的福杉木，特性容易加工處理，耐久及耐腐性也高，木材本身不易開裂、變形，且福州杉繁殖容易，較無病蟲害。
-                在修復上，修復團隊會採用握釘力較高的南松木作為門軸。
-            </p>
-            <p><a href="javascript:void(0)" id="closebt" class="close-btn">了解了，關閉視窗</h3></a>
-        </div>
-        <div id="fade"></div>
-        <div>
-            <h4>打地仗（披麻捉灰）</h4>
-            <p>
-                地仗層是木材表面與表層油漆間的基層。
-                而打地仗這個階段主要是為了保證木板的光滑平整，使油灰滲入木料，防止木材的隙縫與龜裂處造成的不平整影響到作畫，以及預防蟲害、增加木構件的使用年限與保護性，\
-                也避免因天氣溫溼度的變化或木構件本身的劣化而造成結構不穩定，同時，也可以使油漆有更好的附著力。
-            </p>
-        </div>
+
+    </div>
+    <div class="content">
         <div class="box">
-            <img src="https://i.imgur.com/YNONyXz.png">
+            <img src="picture/對話頭貼/L.png">
             <div class="description" data-aos="fade-right">
                 <p>
                     因為現代材料的進步，傳統與現代製作的方法也有差別：
                 </p>
             </div>
         </div>
+    </div>
+    <div class="definition">
         <div>
-            <h5>
-                傳統做法
-            </h5>
-            <p>
-                修補門板
-                <br>
-                利用竹釘、石灰等材料填入門板隙縫
+            <h4> 傳統做法</h4>
+            <p>1.修補門板
+                <br>利用竹釘、石灰等材料填入門板隙縫
             </p>
-            <p>
-                披麻
+            <p>2.披麻
                 <br>在門板上紮緊一層布、麻或紗。
             </p>
-            <P>
-                捉灰
+            <P>3.捉灰
                 <br>使用桐油或豬血、石灰層層塗抹，填補布匹或麻、紗經緯線縫隙，以利表面平整，待乾後，使用砂紙打磨。
                 接著打上紅丹漆或一般色漆等底漆。
             </P>
         </div>
         <div>
-            <h5>
-                現代做法
-            </h5>
-            <p>
-                修補門板
-                <br>
-                利用樹脂或汽車用補土、石灰填入門板隙縫
+            <h4>現代做法</h4>
+            <p>1.修補門板
+                <br>利用樹脂或汽車用補土、石灰填入門板隙縫
             </p>
-            <p>
-                披麻與捉灰
-                <br>門板乾燥後，使用砂紙將門板打磨至光滑平整。
-                在門板上打上一層白色打底漆。
-                <br>待乾後，將松香水與面漆調和，刷在門板上，待乾後使用砂紙打磨。
+            <p>2.披麻與捉灰
+                <br>門板乾燥後，使用砂紙將門板打磨至光滑平整。在門板上打上一層白色打底漆。
+                <br>乾燥後，將松香水與面漆調和，刷在門板上，等乾後使用砂紙打磨。
             </p>
         </div>
+    </div>
+    <div class="content">
         <div class="box2">
-            <img src="https://i.imgur.com/ukphRDL.png">
+            <img src="picture/對話頭貼/R.png">
             <div class="description" data-aos="fade-left">
                 <p>
                     有了現代工具的幫助，在做前置處理變得更方便了呢！
                 </p>
             </div>
-            <span></span>
         </div>
-
-
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
 
 </body>
 
