@@ -36,3 +36,193 @@ button {
     text-decoration: none;
     color: #fff;
   }
+
+
+
+
+  @media (min-width: 320px)and (max-width: 499px) {
+
+    .map {
+        margin: 100px auto;
+        width: 300px;
+        height: 246px;
+        align-items: center;
+        background-image: url("picture/廟宇/北港02.png");
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .map button {
+        color: #fff;
+        background-color: #bb4120;
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+    
+    .map img {
+        position: absolute;
+        display: flex;
+        position: relative;
+        left: 50px;
+    
+    
+        align-items: center;
+    }
+    
+    .map01 {
+        grid-column: 9/12;
+        grid-row: 9/10;
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 709px) {
+
+    .map {
+        margin: 100px auto;
+        width: 400px;
+        height: 328px;
+        align-items: center;
+        background-image: url("picture/廟宇/北港02.png");
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .map button {
+      font-size: 0.7em;
+        color: #fff;
+        background-color: #bb4120;
+        padding: 3px;
+    }
+    
+    .map img {
+        position: absolute;
+        display: flex;
+        position: relative;
+        left: 50px;
+        align-items: center;
+    }
+    
+    .map01 {
+        grid-column: 11/13;
+        grid-row: 8/9;
+    }
+    .map02 {
+        grid-column: 10/12;
+        grid-row: 8/9;
+    }
+    .map03 {
+        grid-column: 10/12;
+        grid-row: 8/9;
+    }
+    .map04 {
+        grid-column: 8/10;
+        grid-row: 7/8;
+    }
+    .map05 {
+       
+        grid-column: 8/10;
+        grid-row: 4/5;
+    }
+    .map06 {
+        grid-column: 16/18;
+        grid-row: 1/2;
+    }
+    .map07 {
+        grid-column: 2/4;
+        grid-row: 11/12;
+    }
+    .map08 {
+        grid-column: 11/13;
+        grid-row: 7/8;
+    }
+    .map09 {
+      grid-column: 7/9;
+      grid-row: 5/6;
+    }
+    .map10 {
+      grid-column: 8/10;
+      grid-row: 3/4;
+    }
+
+}
+
+
+
+@media (min-width: 710px) {
+    .map {
+        margin: 100px auto;
+        width: 700px;
+        height: 573px;
+        align-items: center;
+        background-image: url("picture/廟宇/北港02.png");
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+    .map button {
+      font-size: 1em;
+        color: #fff;
+        background-color: #bb4120;
+        padding: 1.5px;
+        border-radius: 10px;
+    }
+    
+    .map img {
+        position: absolute;
+        display: flex;
+        position: relative;
+        left: 50px;
+        align-items: center;
+    }
+    
+    .map01 {
+        grid-column: 16/18;
+        grid-row: 13/14;
+    }
+    
+    .map02 {
+        grid-column: 13/15;
+        grid-row: 15/16;
+    }
+    
+    .map03 {
+        grid-column: 15/17;
+        grid-row: 14/15;
+    }
+    .map04 {
+        grid-column: 13/15;
+        grid-row: 12/13;
+    }
+    .map05 {
+        grid-column: 12/14;
+        grid-row: 7/8;
+    }
+    .map06 {
+        grid-column: 24/26;
+        grid-row: 1/2;
+    }
+    .map07 {
+        grid-column: 2/4;
+        grid-row: 17/18;
+    }
+    .map08 {
+        grid-column: 15/17;
+        grid-row: 11/12;
+    }
+    .map09 {
+        grid-column: 10/12;
+        grid-row: 9/10;
+    }
+    .map10 {
+        grid-column: 13/15;
+        grid-row: 5/6;
+    }
+    
+}
+
+
