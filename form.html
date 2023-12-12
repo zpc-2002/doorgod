@@ -20,8 +20,165 @@
 </head>
 
 <style>
+    .btncontainer {
+        /* 弹性布局 居中显示 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 允许换行 */
+        flex-wrap: wrap;
+        margin: 100px auto;
+        height: 50vh;
+    }
 
+    .card {
+        position: relative;
+        width: 150px;
+        height: 200px;
+        margin: 10px;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        color: #f5f5f5;
+        /* 阴影 */
+        box-shadow: 0 1px 1px rgba(187, 148, 77, 0.685),
+            0 2px 2px rgba(0, 0, 0, 0.1),
+            0 4px 4px rgba(0, 0, 0, 0.1),
+            0 8px 8px rgba(0, 0, 0, 0.1),
+            0 16px 16px rgba(0, 0, 0, 0.1);
+        /* 溢出隐藏 */
+        overflow: hidden;
+    }
+
+    .card::before {
+        content: "";
+        width: 100%;
+        height: 110%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* background-image: url(/images/139/1.jpg); */
+        background-size: cover;
+        background-position: 0 0;
+        /* 过渡效果: css属性名 时长 贝塞尔曲线 */
+        transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    /* 圖片設置 */
+    .card:nth-child(1)::before {
+        background-image: url(picture/彩繪形式/門板.jpg);
+    }
+
+    .card:nth-child(2)::before {
+        background-image: url(picture/彩繪形式/木雕.jpg);
+    }
+
+    .card:nth-child(3)::before {
+        background-image: url(/images/139/3.jpg);
+    }
+
+
+    /* 遮罩 */
+    .card::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 200%;
+        background: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0) 0%,
+                #ffd07a 55%,
+                #ffd07a 100%);
+        /* 絕對定位 */
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(0);
+        /* 過渡效果 */
+        transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .card .btncontent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        padding: 16px 8px;
+        transform: translateY(60%);
+        transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .card h5 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .card a {
+        font-size: 12px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #fff;
+
+    }
+
+    .card p {
+        font-size: 15px;
+        /* 字间距 */
+        letter-spacing: 2px;
+        width: 80%;
+        line-height: 30px;
+        margin-top: 50px;
+        /* 文本兩端對其 */
+        text-align: justify;
+    }
+
+    .card button {
+        cursor: pointer;
+        border: none;
+        background-color: rgba(253, 144, 72, 0.5);
+        color: #fff;
+        padding: 12px 24px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 25px;
+    }
+
+    .card button:hover {
+        background-color: #000;
+    }
+
+    .card .btncontent *:not(h5) {
+        /* .btncontent下，除了h5，其他元素隐藏并下移20px */
+        opacity: 0;
+        transform: translateY(20px);
+        transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .card:hover {
+        align-items: center;
+    }
+
+    .card:hover::before {
+        transform: translateY(-5%);
+    }
+
+    .card:hover::after {
+        transform: translateY(-50%);
+    }
+
+    .card:hover .btncontent {
+        transform: translateY(0);
+    }
+
+    .card:hover .btncontent *:not(h5) {
+        opacity: 1;
+        transform: translateY(0);
+        /* 过渡效果延迟 */
+        transition-delay: 0.1s;
+    }
 </style>
+
 
 <script type="text/javascript">
     // 彈跳視窗
@@ -121,7 +278,29 @@
 
     <h3>想先了解哪一個？</h3>
 
-
+    <div class="btncontainer">
+        <div class="card">
+            <div class="btncontent">
+                <a href="#choose01">
+                    <h5>門板彩繪門神</h5>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="btncontent">
+                <a href="#choose02">
+                    <h5>木雕門神</h5>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="btncontent">
+                <a href="#choose03">
+                    <h5>版畫門神</h5>
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="definition">
         <div>
             <h4 id="choose01">門板彩繪門神</h4>
@@ -196,11 +375,9 @@
         </div>
     </div>
     <div class="definitionimg">
-
         <div class="light">
-            <a href="index.html" ><img src="picture/首頁/廟宇首頁.png" width="300px" height="300px"></a>
+            <a href="C.html #choose"><img src="picture/首頁/廟宇首頁.png" width="300px" height="300px"></a>
         </div>
-        <div></div>
     </div>
 
    
