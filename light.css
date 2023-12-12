@@ -1,6 +1,7 @@
 .light{
     margin: 30px auto;
-    
+       /* 滑鼠手指 */
+       cursor: pointer;
 }
 .light b{
     padding: 5px;

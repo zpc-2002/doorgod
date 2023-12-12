@@ -56,41 +56,33 @@ body {
         max-width: 75px;
         max-height: 75px;
     }
+
     /* 釋義 */
-.definition {
-    display: grid;
-    grid-gap: 10px;
-    line-height: 28px;
-    border: 3px;
-    background-color: #f2ede3;
-    padding: 30px;
-    margin: 60px auto;
-    border-radius: 15px;
-    min-height: 400px;
-}
+    .definition {
+        display: grid;
+        grid-gap: 10px;
+        line-height: 28px;
+        border: 3px;
+        background-color: #f2ede3;
+        padding: 30px;
+        margin: 60px auto;
+        border-radius: 15px;
+        min-height: 400px;
+    }
 
-.definition p {
-    line-height: 30px;
-    margin: 30px auto;
-}
+    .definition p {
+        line-height: 30px;
+        margin: 30px auto;
+    }
 
-.definition img {
-height: 100%;
-    width: 100%;
-    margin: auto;
-}
+    .definitionimg {
+        max-width: 1000px;
+        margin: 100px auto;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
 
 
-.definitionimg {
-    max-width: 1000px;
-    margin: 100px auto;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-}
-.definitionimg img{
-    width: 100%;
-}
 
 }
 
@@ -138,10 +130,87 @@ height: 100%;
         height: 90px;
     }
 
-/* 釋義 */
-.definition {
-    display: grid;
 
+    .content p {
+        margin: 100px 5%;
+        line-height: 40px;
+    }
+
+    /* 釋義 */
+    .definition {
+        display: grid;
+
+        grid-gap: 10px;
+        line-height: 28px;
+        border: 3px;
+        background-color: #f2ede3;
+        padding: 30px;
+        margin: 100px auto;
+        border-radius: 15px;
+        min-height: 400px;
+    }
+
+    .definition p {
+
+        line-height: 30px;
+        margin: 30px auto;
+    }
+
+  
+
+    .definitionimg {
+        margin: 100px auto;
+        display: grid;
+
+  
+        align-items: center;
+    }
+
+ 
+}
+
+@media (min-width: 766px) and (max-width: 1099px){
+    
+     /* 釋義 */
+     .definition {
+        display: grid;
+    
+        grid-gap: 10px;
+        line-height: 28px;
+        border: 3px;
+        background-color: #f2ede3;
+        padding: 30px;
+        margin: 60px 10%;
+        border-radius: 15px;
+        min-height: 400px;
+    }
+
+    .definition p {
+        line-height: 30px;
+        margin: 30px auto;
+    }
+
+
+
+    .definitionimg {
+        display: grid;
+        margin: 100px 10%;
+
+        align-items: center;
+    }
+
+
+}
+
+
+
+
+@media (min-width: 1100px) {
+
+  /* 釋義 */
+  .definition {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
     grid-gap: 10px;
     line-height: 28px;
     border: 3px;
@@ -153,32 +222,22 @@ height: 100%;
 }
 
 .definition p {
-
     line-height: 30px;
     margin: 30px auto;
 }
 
-.definition img {
 
-    width: 90%;
-}
 
 
 .definitionimg {
-    max-width: 1000px;
-    margin: 100px auto;
-    
+    display: grid;
+    margin: 100px 10%;
     grid-template-rows: 1fr 1fr;
     align-items: center;
 }
-.definitionimg img{
-    width: auto;
-    height: auto;
-    align-items: center;
-}
+
 
 }
-
 
 
 @media (min-width: 768px) {
@@ -213,46 +272,12 @@ height: 100%;
         max-width: 100px;
         max-height: 100px;
     }
-
-
-   
-/* 釋義 */
-.definition {
-    display: grid;
-    grid-template-columns: 2fr 3fr ;
-    grid-gap: 10px;
-    line-height: 28px;
-    border: 3px;
-    background-color: #f2ede3;
-    padding: 30px;
-    margin: 60px 10%;
-    border-radius: 15px;
-    min-height: 400px;
+    .content p {
+        margin: 100px 5%;
+        line-height: 50px;
+    }
 }
 
-.definition p {
-    line-height: 30px;
-    margin: 30px auto;
-}
-
-.definition img {
-
-    width: 90%;
-}
-
-
-.definitionimg {
-    display: grid;
-    margin: 100px 10%;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-}
-.definitionimg img{
-    width: auto;
-    height: auto;
-}
-
-}
 
 a {
     list-style-type: none;
@@ -356,7 +381,8 @@ a {
     align-items: center;
     background-color: #faf8f3;
 }
-.f p{
+
+.f p {
     padding: 20px;
 }
 
@@ -384,10 +410,7 @@ a {
     border-radius: 15px;
 }
 
-.content p {
-    margin: 100px 5%;
-    line-height: 30px;
-}
+
 
 /* 頭像+對話框_左 */
 .box {
