@@ -60,6 +60,7 @@ body {
     /* 釋義 */
     .definition {
         display: grid;
+        grid-template-rows: 1fr 1fr;
         grid-gap: 10px;
         line-height: 28px;
         border: 3px;
@@ -69,6 +70,10 @@ body {
         border-radius: 15px;
         min-height: 400px;
     }
+    .definition img{
+        padding: 20px auto;
+    }
+
 
     .definition p {
         line-height: 30px;
@@ -161,8 +166,6 @@ body {
     .definitionimg {
         margin: 100px auto;
         display: grid;
-
-  
         align-items: center;
     }
 
@@ -234,6 +237,9 @@ body {
     margin: 100px 10%;
     grid-template-rows: 1fr 1fr;
     align-items: center;
+}
+.definitionimg img{
+padding: auto;
 }
 
 

@@ -27,6 +27,7 @@
     -moz-opacity: 0.8;
     opacity: .80;
     filter: alpha(opacity=80);
+
 }
 
 #light {
@@ -57,12 +58,16 @@
     text-align: center;
 }
 
+#light p{
+    margin-top: 5%;
+}
 #light a {
     padding: 5px;
     border-radius: 5px;
     color: #333;
     background-color: #ffd484;
     text-decoration: none;
+    
 }
 
 #light li{
