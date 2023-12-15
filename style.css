@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #364F63;
 }
 
 /* 樣式基礎 */
@@ -11,56 +12,13 @@ body {
     font-size: 16px;
     background-image: url("picture/對話頭貼/背景2.png");
     background-size: contain;
-
 }
 
-/* 媒體查詢 */
-@media (min-width: 320px)and (max-width: 499px) {
-
-    /* 适应小屏幕 */
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    h4 {
-        font-size: 1rem;
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
-
-    img {
-        width: 80%;
-        height: 80%;
-    }
-
-    nav a {
-        font-size: 0.8rem;
-    }
-
-    .box img {
-        max-width: 75px;
-        max-height: 75px;
-    }
-
-    .box2 img {
-        max-width: 75px;
-        max-height: 75px;
-    }
-
-    /* 釋義 */
+/* 釋義 */
+@media (min-width: 320px)and (max-width: 699px) {
     .definition {
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 2fr 3fr;
         grid-gap: 10px;
         line-height: 28px;
         border: 3px;
@@ -70,10 +28,11 @@ body {
         border-radius: 15px;
         min-height: 400px;
     }
-    .definition img{
-        padding: 20px auto;
-    }
 
+    .definition img {
+        padding: 20px auto;
+        grid-row: 2/3;
+    }
 
     .definition p {
         line-height: 30px;
@@ -83,59 +42,35 @@ body {
     .definitionimg {
         max-width: 1000px;
         margin: 100px auto;
-        grid-template-columns: 1fr 1fr;
+        width: 50dvw;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         align-items: center;
     }
 
-
-
+    .indexbtn {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin: 100px auto;
+        align-items: center;
+        max-width: 800px;
+        min-width: 250px;
+        padding: 20px;
+    }
+    .indexbtn  img{
+    height: 250px;
+    width: 250px;
+    }
+    .indexbtn01{
+        grid-column: 2/3;
+    }
+    .indexbtn02{
+        grid-column: 2/3;
+    }
 }
 
 
-@media (min-width: 500px) and (max-width: 767px) {
-
-    /* 适应中等屏幕 */
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-
-    h4 {
-        font-size: 1.2rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    img {
-        width: 80%;
-        height: 80%;
-    }
-
-    nav a {
-        font-size: 1rem;
-        ;
-    }
-
-    .box img {
-        width: 90px;
-        height: 90px;
-    }
-
-    .box2 img {
-        width: 90px;
-        height: 90px;
-    }
-
-
+@media (min-width: 700px) and (max-width: 960px) {
     .content p {
         margin: 100px 5%;
         line-height: 40px;
@@ -144,7 +79,7 @@ body {
     /* 釋義 */
     .definition {
         display: grid;
-
+        grid-template-rows: 1fr 3fr;
         grid-gap: 10px;
         line-height: 28px;
         border: 3px;
@@ -161,23 +96,39 @@ body {
         margin: 30px auto;
     }
 
-  
-
     .definitionimg {
         margin: 100px auto;
         display: grid;
         align-items: center;
     }
+    .indexbtn {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
- 
+        margin: 100px auto;
+        align-items: center;
+        max-width: 800px;
+        min-width: 250px;
+        padding: 20px;
+    }
+    .indexbtn  img{
+    height: 300px;
+    width: 300px;
+    }
+    .indexbtn01{
+        grid-column: 2/3;
+    }
+    .indexbtn02{
+        grid-column: 3/4;
+    }
 }
 
-@media (min-width: 766px) and (max-width: 1099px){
-    
-     /* 釋義 */
-     .definition {
+@media (min-width: 961px) {
+
+    /* 釋義 */
+    .definition {
         display: grid;
-    
+        grid-template-columns: 3fr 2fr;
         grid-gap: 10px;
         line-height: 28px;
         border: 3px;
@@ -193,96 +144,48 @@ body {
         margin: 30px auto;
     }
 
-
-
     .definitionimg {
         display: grid;
         margin: 100px 10%;
-
+        grid-template-rows: 1fr 1fr;
         align-items: center;
     }
 
+    .definitionimg img {
+        padding: auto;
+    }
+    .indexbtn {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
-}
-
-
-
-
-@media (min-width: 1100px) {
-
-  /* 釋義 */
-  .definition {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-gap: 10px;
-    line-height: 28px;
-    border: 3px;
-    background-color: #f2ede3;
-    padding: 30px;
-    margin: 60px 10%;
-    border-radius: 15px;
-    min-height: 400px;
-}
-
-.definition p {
-    line-height: 30px;
-    margin: 30px auto;
-}
-
-
-
-
-.definitionimg {
-    display: grid;
-    margin: 100px 10%;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-}
-.definitionimg img{
-padding: auto;
-}
-
-
+        margin: 100px auto;
+        align-items: center;
+        max-width: 800px;
+        min-width: 250px;
+        padding: 20px;
+    }
+    .indexbtn  img{
+    height: 300px;
+    width: 300px;
+    }
+    .indexbtn01{
+        grid-column: 2/3;
+    }
+    .indexbtn02{
+        grid-column: 3/4;
+    }
 }
 
 
 @media (min-width: 768px) {
-
-    /* 适应大屏幕 */
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 1.8rem;
-    }
-
-    h4 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1.2rem;
-    }
-
-    .box img {
-        max-width: 100px;
-        max-height: 100px;
-    }
-
-    .box2 img {
-        max-width: 100px;
-        max-height: 100px;
-    }
     .content p {
         margin: 100px 5%;
         line-height: 50px;
     }
 }
+
+
+
 
 
 a {
@@ -330,7 +233,7 @@ a {
 
 .information {
     width: 220px;
-    background-color: #e07a5f;
+    background-color: #FFD07A;
     transform: translate(-20px, -200px);
     border-radius: 10px;
     padding: 20px 0;
@@ -342,11 +245,11 @@ a {
 }
 
 .button:hover {
-    background-color: #d15a39;
+    background-color: #FFD07A;
 }
 
 .button li:hover {
-    background-color: #ffb29d;
+    background-color: rgb(248, 215, 206);
 }
 
 .button ul li {
@@ -405,7 +308,7 @@ a {
 
 /* 對話+說明容器' */
 .content {
-    margin: 30px auto;
+    margin: 15% auto;
     max-width: 800px;
     min-width: 250px;
     height: auto;
@@ -434,7 +337,7 @@ a {
     border: 2px;
     border-radius: 15px;
     padding: 20px 5%;
-    background-color: rgb(221, 214, 205)
+    background-color: #F7EDE2;
 }
 
 /* 頭像+對話框_右 */
@@ -454,8 +357,8 @@ a {
     border: 2px;
     border-radius: 15px;
     padding: 20px 5%;
-    background-color: rgb(240, 150, 47);
-    color: #fff;
+    background-color: #FFD07A;
+    color: #364F63;
     margin-left: 30px;
 
 }
@@ -468,7 +371,7 @@ a {
     border: 2px;
     border-radius: 15px;
     padding: 20px 5%;
-    background-color: rgb(240, 150, 47);
+    background-color: #FFD07A;
     margin-left: 30px;
     list-style-type: none;
     text-decoration: none;
@@ -477,7 +380,7 @@ a {
 /* 對話框細節選項超連結_右 */
 .box2 a {
     font-size: large;
-    color: #fff;
+    color: #364F63;
 }
 
 
