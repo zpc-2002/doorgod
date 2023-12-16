@@ -49,11 +49,10 @@ button a {
         width: 300px;
         height: 246px;
         align-items: center;
-        background-image: url("picture/廟宇/北港02.png");
-        background-size: cover;
+      
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     }
 
     .map button {
@@ -61,6 +60,7 @@ button a {
         background-color: #bb4120;
         padding: 0.5rem;
         font-size: 0.7rem;
+        margin: 5px;
     }
 
     .map img {
@@ -68,14 +68,16 @@ button a {
         display: flex;
         position: relative;
         left: 50px;
-
-
         align-items: center;
     }
 
     .map01 {
-        grid-column: 9/12;
-        grid-row: 9/10;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .map01 {
+        grid-column: 2/3;
+        grid-row: 2/3;
     }
 
 
@@ -99,6 +101,11 @@ button a {
         border-radius: 10px;
         border: #000 solid 2px;
     }
+
+
+
+
+
 
     .temple img {
         position: absolute;
@@ -202,12 +209,13 @@ button a {
     }
 
     .map02 {
-        grid-column: 10/12;
-        grid-row: 8/9;
+        grid-column: 9/11;
+        grid-row: 9/10;
+
     }
 
     .map03 {
-        grid-column: 10/12;
+        grid-column: 9/11;
         grid-row: 8/9;
     }
 
