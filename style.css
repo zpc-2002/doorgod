@@ -330,7 +330,7 @@ a {
 
 /* 對話+說明容器' */
 .content {
-    margin: 15% auto;
+    margin: 60px auto;
     max-width: 800px;
     min-width: 250px;
     height: auto;
@@ -416,7 +416,7 @@ a {
     min-width: 250px;
     height: auto;
     padding: 50px 20px;
-    background-color: #faf8f3;
+    background-color: #f7ede2;
     /* background-image: url("picture/對話頭貼/背景.png"); */
     border: 0.2em solid #ffffff;
     border-radius: 15px;
@@ -426,6 +426,21 @@ a {
     padding: 10px;
     color: #333;
 }
+.q{
+    margin-bottom: 60px;
+}
+.q input{
+    margin: 10px auto;
+}
+.q p{
+    margin-top: 20px;
+margin-bottom: 10px;
+
+}
+
+
+
+
 
 
 /* 首頁圖片 */
