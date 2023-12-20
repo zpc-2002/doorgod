@@ -38,28 +38,28 @@
                 <li><a href="doorgod_other.html">其他特殊門神</a></li>
             </ul>
         </li>
-
+    
         <li class="button">
             <span><a href="form.html">彩繪表現形式</a></span>
             <ul>
-                <li><a href="form.html #choose01">門板彩繪門神</a></li>
-                <li><a href="form.html #choose02">木雕門神</a></li>
-                <li><a href="form.html #choose03">版畫門神</a></li>
+                <li><a href="form.html#choose01">門板彩繪門神</a></li>
+                <li><a href="form.html#choose02">木雕門神</a></li>
+                <li><a href="form.html#choose03">版畫門神</a></li>
             </ul>
         </li>
         <li class="button">
             <span><a href="door god from.html">門神形式</a></span>
             <ul>
-                <li><a href="door god from.html #choose01">
+                <li><a href="door god from.html#choose01">
                         位序配置
                     </a></li>
-                <li> <a href="door god from.html #choose02">
+                <li> <a href="door god from.html#choose02">
                         構圖比例
                     </a></li>
-                <li> <a href="door god from.html #choose03">
+                <li> <a href="door god from.html#choose03">
                         人像比例
                     </a></li>
-
+    
             </ul>
         </li>
         <li class="button">
@@ -69,16 +69,16 @@
             <span><a href="temple.html">廟宇介紹</a></span>
             <ul>
                 <li><a href="temple02.html#c1">
-                        具備文化資產身分
+                        文資身分
                     </a></li>
                 <li><a href="temple02.html#c2">
-                        知名彩繪藝師
+                        知名藝師
                     </a></li>
                 <li><a href="temple02.html#c3">
                         雕刻門神
                     </a></li>
                 <li><a href="temple02.html#c4">
-                        扇門數量多寡
+                        扇門數量
                     </a></li>
                 <li> <a href="temple02.html#c5">
                         特殊祭祀神
@@ -86,7 +86,7 @@
                 <li> <a href="temple02.html#c6">
                         佛教寺廟
                     </a></li>
-
+    
             </ul>
         </li>
     </ul>
@@ -135,75 +135,7 @@
     </div>
     </div>
 
-    <div class="content">
-        <div class="box">
-            <img src="picture/對話頭貼/L.png">
-            <div class="description" data-aos="fade-right">
-                <p>
-                    為了加深印象，我們來做個小測驗吧！
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-
-    <h2 align="">道教門神測驗</h2>
-    <div class="mcq">
-
-        <form id="quizForm">
-            <div class="q">
-                <p>1. 手纏小龍的門神為哪一位?</p>
-                <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">東方持國天王</label><br>
-                <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">南方增長天王</label><br>
-                <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">北方多聞天王</label><br> 
-                <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">西方廣目天王</label><br> 
-                <P>不會嗎？<a href="#03">回到主題複習</a></P>
-            </div>
-            <div class="q">
-                <p>2. 寓意為長壽多子為下列哪些物品組合?</p>
-                <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">官帽與花</label><br>
-                <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">官帽與酒杯</label><br>
-                <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">壽桃與石榴</label><br>
-                <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">酒杯與花</label><br> 
-                <P>不會嗎？<a href="#04">回到主題複習</a></P>
-
-            </div>
-
-            <input class="ans" type="submit" value="提交答案">
-        </form>
-
-        <div id="results"></div>
-    </div>
-    <script>
-        const quizForm = document.getElementById("quizForm");
-        const resultsDiv = document.getElementById("results");
-
-        quizForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const answers = {
-                q1: document.querySelector('input[name="q1"]:checked').value,
-                q2: document.querySelector('input[name="q2"]:checked').value,
-            };
-
-            const correctAnswers = {
-                q1: "d",
-                q2: "c",
-            };
-
-            let score = 0;
-
-            for (const question in answers) {
-                if (answers[question] === correctAnswers[question]) {
-                    score++;
-                }
-            }
-
-            resultsDiv.innerHTML = `恭喜！你得分為：${score} / 2`;
-        });
-    </script>
-
+   
 
 
     <div class="definitionimg">

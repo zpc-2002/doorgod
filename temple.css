@@ -2,111 +2,190 @@
 
     /* 釋義 */
     .temple2 {
-        max-width: 800px;
-        min-width: 250px;
-        padding: 30px;
-        margin: 60px auto;
-        border-radius: 15px;
-        min-height: 400px;
+        padding: 20px;
+        background-color: #fff;
         display: grid;
-       
-        grid-auto-rows: 1fr 1fr;
-        grid-gap: 10px;
-        line-height: 28px;
-        border: 3px;
-        background-color: #f2ede3;
-        margin: 60px auto;
-        border-radius: 15px;
+        grid-template-rows: 1fr 1fr;
+        margin: 60px 10%;
+        grid-gap: 20px;
     }
 
-    .templep {
-        line-height: 30px;
-        margin: 30px auto;
+    .temple3 {
         grid-row: 1/2;
     }
 
-    .templeimg {
-        width: 100%;
-        margin: auto;
+    .temple4 {
         grid-row: 2/3;
+        align-items: center;
     }
-    .templeimg img{
+
+    .temple4 img {
+        height: auto;
         width: 80%;
+    }
+
+    .map2 {
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin: 60px 10%;
+        grid-gap: 20px;
+    }
+
+    .map3 {
+        grid-row: 1/2;
+        align-items: center;
+    }
+
+    .map4 {
+        grid-row: 2/3;
+        align-items: center;
+    }
+
+    .map4 img {
+        height: auto;
+        width: 70%;
     }
 
 }
 
-@media (min-width: 500px) and (max-width: 709px) {
+@media (min-width: 500px) and (max-width: 1100px) {
 
     .temple2 {
-        max-width: 800px;
-        min-width: 250px;
-        padding: 30px;
-        margin: 60px auto;
-        border-radius: 15px;
-        min-height: 400px;
+        padding: 20px;
+        background-color: #fff;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-auto-rows: 1fr 1fr;
-        grid-gap: 10px;
-        line-height: 28px;
-        border: 3px;
-        background-color: #f2ede3;
-        margin: 60px auto;
-        border-radius: 15px;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin: 60px 10%;
+        grid-gap: 20px;
     }
 
-    .templep {
-        line-height: 30px;
-        margin: 30px auto;
-        grid-column: 1/3;
+    .temple3 {
+        grid-row: 1/2;
     }
 
-    .templeimg {
-        width: 100%;
-        margin: auto;
-        grid-column: 3/6;
+    .temple4 {
+        grid-row: 2/4;
     }
-    .templeimg img{
+
+    .temple4 img {
+        height: auto;
+        width: 75%;
+    }
+
+    .map2 {
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 60px 10%;
+        grid-gap: 20px;
+    }
+
+    .map3 {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        align-items: center;
+    }
+
+    .map4 {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+
+    .map img {
+        height: auto;
         width: 80%;
     }
-
 }
 
 
 
-@media (min-width: 710px) {
+@media (min-width: 1101px) {
 
     .temple2 {
-        max-width: 800px;
-        min-width: 250px;
-        padding: 30px;
-        margin: 60px auto;
-        border-radius: 15px;
-        min-height: 400px;
+        padding: 20px;
+        background-color: #fff;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-auto-rows: 1fr 1fr;
-        grid-gap: 10px;
-        line-height: 28px;
-        border: 3px;
-        background-color: #f2ede3;
-        margin: 60px auto;
-        border-radius: 15px;
+        grid-template-columns: 1fr 1fr;
+        margin: 60px 10%;
+        grid-gap: 20px;
     }
 
-    .templep {
-        line-height: 30px;
-        margin: 30px auto;
-        grid-column: 1/3;
+    .temple3 {
+        grid-column: 1/2;
     }
 
-    .templeimg {
-        width: 100%;
-        margin: auto;
-        grid-column: 3/6;
+    .temple4 {
+        grid-column: 2/3;
     }
-    .templeimg img{
+
+    .temple4 img {
+        height: auto;
+        width: 80%;
+    }
+
+    .map2 {
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 60px 10%;
+        grid-gap: 20px;
+    }
+
+    .map3 {
+        grid-column: 1/2;
+        align-items: center;
+    }
+
+    .map4 {
+        grid-column: 2/3;
+    }
+
+    .map4 img {
+        height: auto;
         width: 80%;
     }
 }
+
+.temple5 {
+    padding: 20px;
+    background-color: #fff;
+ 
+    margin: 60px 10%;
+    grid-gap: 20px;
+    align-items: center;
+}
+.temple6 {
+   align-items: center;
+   
+}
+
+
+
+.map4 a {
+    font-size: larger;
+    color: #bb4120;
+}
+
+
+#carousel {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+.temple5btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add additional styles as needed */

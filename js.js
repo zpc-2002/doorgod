@@ -22,64 +22,39 @@ function updateSlider() {
 setInterval(nextSlide, 3000);
 
 
-// 選擇題
+var currentSlide = 0;
 
-const quizForm = document.getElementById("quizForm");
-const resultsDiv = document.getElementById("results");
-
-quizForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const answers = {
-        q1: document.querySelector('input[name="q1"]:checked').value,
-        q2: document.querySelector('input[name="q2"]:checked').value
-    };
-
-    const correctAnswers = {
-        q1: "a",
-        q2: "a"
-    };
-
-    let score = 0;
-
-    for (const question in answers) {
-        if (answers[question] === correctAnswers[question]) {
-            score++;
-        }
+function showSlide(index) {
+    var slides = document.querySelectorAll('.slide');
+    
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
     }
 
-    resultsDiv.innerHTML = `你得分為：${score} / 2`;
-});
+    // Hide all slides
+    slides.forEach(function(slide) {
+        slide.style.display = 'none';
+    });
 
-// 彈跳視窗
-// alert() 
-function a() {
-
-    alert('這是彈跳警告視窗');
+    // Show the current slide
+    slides[currentSlide].style.display = 'block';
 }
 
-// confirm() 
-function c() {
-    m = confirm('這是彈跳確認視窗');
-    // 可透過真假值去做不同的變化
-    if (m == true)
-        alert("按下確定");
+function nextSlide() {
+    showSlide(currentSlide + 1);
 }
 
-
-Swal.fire({
-    title: 'Sweet!',
-    text: 'Modal with a custom image.',
-    imageUrl: 'https://unsplash.it/400/200',
-    imageWidth: 400,
-    imageHeight: 200,
-    imageAlt: 'Custom image',
-})
-
-const showAlert = () => {
-    Swal.fire({
-        icon: 'success',
-        title: 'Hi',
-        text: 'Thanks for coming!',
-    })
+function prevSlide() {
+    showSlide(currentSlide - 1);
 }
+
+// Show the first slide when the page loads
+showSlide(0);
+
+// You can also add event listeners for next and previous buttons
+
+

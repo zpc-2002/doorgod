@@ -28,6 +28,9 @@ header {
     h4 {
         font-size: 1rem;
     }
+    h5 {
+        font-size: 0.8rem;
+    }
 
     p {
         font-size: 0.8rem;
@@ -72,6 +75,9 @@ header {
     h4 {
         font-size: 1.2rem;
     }
+    h5 {
+        font-size: 1rem;
+    }
 
     p {
         font-size: 1rem;
@@ -108,6 +114,9 @@ header {
     h4 {
         font-size: 1.5rem;
     }
+    h5 {
+        font-size: 1.2rem;
+    }
 
     p {
         font-size: 1.2rem;
@@ -138,7 +147,7 @@ h2 {
 
 /* 標題3 */
 h3 {
-    background-color: #fff;
+    background-color: #f2ede3;
     padding: 20px;
     margin-bottom: 3%;
    
@@ -148,6 +157,10 @@ h3 {
 /* 標題4 */
 h4 {
     
+    text-align: center;
+}
+h5 {
+    margin: 15px;
     text-align: center;
 }
 

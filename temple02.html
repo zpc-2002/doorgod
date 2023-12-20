@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
 
     <!--  連結css-->
     <link rel="stylesheet" href="style.css">
@@ -20,6 +20,46 @@
 
     <title>門面擔當-廟宇介紹</title>
 </head>
+<script>
+    var currentSlide = 0;
+
+    function showSlide(index) {
+        var slides = document.querySelectorAll('.slide');
+
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
+
+        // Hide all slides
+        slides.forEach(function (slide) {
+            slide.style.display = 'none';
+        });
+
+        // Show the current slide
+        slides[currentSlide].style.display = 'block';
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    // Show the first slide when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+        showSlide(0);
+    });
+
+    // You can also add event listeners for next and previous buttons
+
+
+</script>
 
 <body>
     <script>
@@ -29,106 +69,114 @@
             duration: 1500.
         });
     </script>
-   <ul class="shell">
-    <li class="button">
-        <span><a href="index.html">首頁</a></span>
-    </li>
-    <li class="button">
-        <span><a href="origin.html">門神起源與介紹</a></span>
-        <ul>
-            <li><a href="doorgod_Taoism.html">道教門神</a></li>
-            <li><a href="doorgod_Buddhism.html">佛教門神</a></li>
-            <li><a href="doorgod_c.html">次間門神</a></li>
-            <li><a href="doorgod_other.html">其他特殊門神</a></li>
-        </ul>
-    </li>
 
-    <li class="button">
-        <span><a href="form.html">彩繪表現形式</a></span>
-        <ul>
-            <li><a href="form.html #choose01">門板彩繪門神</a></li>
-            <li><a href="form.html #choose02">木雕門神</a></li>
-            <li><a href="form.html #choose03">版畫門神</a></li>
-        </ul>
-    </li>
-    <li class="button">
-        <span><a href="door god from.html">門神形式</a></span>
-        <ul>
-            <li><a href="door god from.html #choose01">
-                    位序配置
-                </a></li>
-            <li> <a href="door god from.html #choose02">
-                    構圖比例
-                </a></li>
-            <li> <a href="door god from.html #choose03">
-                    人像比例
-                </a></li>
+    <ul class="shell">
+        <li class="button">
+            <span><a href="index.html">首頁</a></span>
+        </li>
+        <li class="button">
+            <span><a href="origin.html">門神起源與介紹</a></span>
+            <ul>
+                <li><a href="doorgod_Taoism.html">道教門神</a></li>
+                <li><a href="doorgod_Buddhism.html">佛教門神</a></li>
+                <li><a href="doorgod_c.html">次間門神</a></li>
+                <li><a href="doorgod_other.html">其他特殊門神</a></li>
+            </ul>
+        </li>
 
-        </ul>
-    </li>
-    <li class="button">
-        <span><a href="painting process.html ">門板彩繪施作</a></span>
-    </li>
-    <li class="button">
-        <span><a href="temple.html">廟宇介紹</a></span>
-        <ul>
-            <li><a href="temple02.html#c1">
-                    具備文化資產身分
-                </a></li>
-            <li><a href="temple02.html#c2">
-                    知名彩繪藝師
-                </a></li>
-            <li><a href="temple02.html#c3">
-                    雕刻門神
-                </a></li>
-            <li><a href="temple02.html#c4">
-                    扇門數量多寡
-                </a></li>
-            <li> <a href="temple02.html#c5">
-                    特殊祭祀神
-                </a></li>
-            <li> <a href="temple02.html#c6">
-                    佛教寺廟
-                </a></li>
+        <li class="button">
+            <span><a href="form.html">彩繪表現形式</a></span>
+            <ul>
+                <li><a href="form.html#choose01">門板彩繪門神</a></li>
+                <li><a href="form.html#choose02">木雕門神</a></li>
+                <li><a href="form.html#choose03">版畫門神</a></li>
+            </ul>
+        </li>
+        <li class="button">
+            <span><a href="door god from.html">門神形式</a></span>
+            <ul>
+                <li><a href="door god from.html#choose01">
+                        位序配置
+                    </a></li>
+                <li> <a href="door god from.html#choose02">
+                        構圖比例
+                    </a></li>
+                <li> <a href="door god from.html#choose03">
+                        人像比例
+                    </a></li>
 
-        </ul>
-    </li>
-</ul>
+            </ul>
+        </li>
+        <li class="button">
+            <span><a href="painting process.html ">門板彩繪施作</a></span>
+        </li>
+        <li class="button">
+            <span><a href="temple.html">廟宇介紹</a></span>
+            <ul>
+                <li><a href="temple02.html#c1">
+                        文資身分
+                    </a></li>
+                <li><a href="temple02.html#c2">
+                        知名藝師
+                    </a></li>
+                <li><a href="temple02.html#c3">
+                        雕刻門神
+                    </a></li>
+                <li><a href="temple02.html#c4">
+                        扇門數量
+                    </a></li>
+                <li> <a href="temple02.html#c5">
+                        特殊祭祀神
+                    </a></li>
+                <li> <a href="temple02.html#c6">
+                        佛教寺廟
+                    </a></li>
+
+            </ul>
+        </li>
+    </ul>
     <h2>廟宇介紹</h2>
-
 
     <h3 id="c1">具備文化資產身分</h3>
     <!-- 國定古蹟北港朝天宮 -->
-    <h4 id="choose01" class="temple2">國定古蹟北港朝天宮 </h4>
+    <h4 id="choose01">國定古蹟北港朝天宮 </h4>
 
-    <div class="templep">
-        <div>
-            <h4>朝天宮簡介</h4>
+    <div class="temple2">
+        <div class="temple3">
+            <h5>朝天宮簡介</h5>
             <p>
                 北港朝天宮舊稱「天妃廟」或「天后宮」。
-                由佛教臨濟宗第三十四代禪師樹璧和尚自中國福建湄洲朝天閣奉請媽祖神尊至北港，開基立廟。
-                朝天宮開始建於清康熙三十三年（西元1694年）
-                廟在1985年被列為二級古蹟，1997年改制為國定古蹟。
+                <br>由佛教臨濟宗第三十四代禪師樹璧和尚自中國福建湄洲朝天閣奉請媽祖神尊至北港，開基立廟。
+                <br>朝天宮開始建於清康熙三十三年（西元1694年）並在乾隆三十九年（西元1774年）時更是由地方士紳集資增建三川殿、拜亭等六間，且由當時的住持僧浣衷，將宮名改為「朝天宮」。因為日治時期實施的皇民化運動，部分神像遭到燒毀，但整體還是保存良好。廟在1985年被列為二級古蹟，1997年改制為國定古蹟。
+                <br>經過多次修復與改建才有今日這般規模，是非常具歷史及代表性的寺廟
             </p>
         </div>
-        <div class="templeimg">
-            <h4>廟宇正面</h4>
+        <div class="temple4">
+            <h5>廟宇正面</h5>
             <img src="picture/廟宇/朝天宮.jpg">
         </div>
     </div>
-    
-    <div class="f">
-        <h4>地圖參考</h4>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0109184627213!2d120.29985068583652!3d23.568051341092733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ea285b604f125%3A0x7a7c8b94e816afce!2z5YyX5riv5pyd5aSp5a6u!5e0!3m2!1szh-TW!2stw!4v1700202734294!5m2!1szh-TW!2stw"
-            width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    <div class="map2">
+        <div class="map3">
+            <h4>地圖參考</h4>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0109184627213!2d120.29985068583652!3d23.568051341092733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ea285b604f125%3A0x7a7c8b94e816afce!2z5YyX5riv5pyd5aSp5a6u!5e0!3m2!1szh-TW!2stw!4v1700202734294!5m2!1szh-TW!2stw"
+                width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map4">
+            <h4>延伸閱讀</h4>
+            <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
+        </div>
+
     </div>
 
     <!-- 縣定古蹟北港鎮安宮 -->
     <h4 id="choose02">縣定古蹟北港鎮安宮 </h4>
     <div class="temple2">
-        <div class="templep">
+        <div class="temple3">
             <h4>鎮安宮簡介</h4>
             <p>
                 鎮安宮主祀七王爺、丁府八千歲及馬府千歲。
@@ -141,25 +189,29 @@
                 於2017年6月1日指定為縣定古蹟。
             </P>
         </div>
-        <div class="templeimg">
+        <div class="temple4">
             <h4>廟宇正面</h4>
             <img src="picture/廟宇/鎮安宮.jpg">
         </div>
     </div>
-   
-    <div class="f">
-        <div>
+
+    <div class="map2">
+        <div class="map3">
             <h4>地圖參考</h4>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0427655933136!2d120.3017982!3d23.566907500000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ea37388ce8c55%3A0x227171d29aba34a3!2z57ij5a6a5Y-k6Lmf5YyX5riv6Y6u5a6J5a6u!5e0!3m2!1szh-TW!2stw!4v1700202644499!5m2!1szh-TW!2stw"
                 width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <div class="map4">
+            <h4>延伸閱讀</h4>
+            <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
+        </div>
     </div>
     <!-- 縣定古蹟北港義民廟 -->
     <h4>縣定古蹟北港義民廟 </h4>
     <div class="temple2" id="choose03">
-        <div class="templep">
+        <div class="temple3">
             <P>
                 北港義民廟為臺灣少數奉祀閩籍義民之廟宇，主祀義民公，創建於乾隆五十三年（1788年）。
             </P>
@@ -173,27 +225,33 @@
                 於2007年10月25日指定為縣定古蹟。
             </P>
         </div>
-        <div class="templeimg">
+        <div class="temple4">
             <h4>廟宇正面</h4>
             <img src="picture/廟宇/">
         </div>
     </div>
-  
-    <div class="f">
-        <h4>地圖參考</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0200798624383
-            !2d120.30286409999998!3d23.567722300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4
-            f13.1!3m3!1m2!1s0x346ea28683fbaaf1%3A0x398782abc0bbd467!2z5YyX5riv576p5rCR5bu
-            f44CQ5peM576p44CR!5e0!3m2!1szh-TW!2stw!4v1700202412093!5m2!1szh-TW!2stw" width="300" height="250"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="map2">
+        <div class="map3">
+            <h4>地圖參考</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0200798624383
+                !2d120.30286409999998!3d23.567722300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4
+                f13.1!3m3!1m2!1s0x346ea28683fbaaf1%3A0x398782abc0bbd467!2z5YyX5riv576p5rCR5bu
+                f44CQ5peM576p44CR!5e0!3m2!1szh-TW!2stw!4v1700202412093!5m2!1szh-TW!2stw" width="300" height="250"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map4">
+            <h4>延伸閱讀</h4>
+            <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
+        </div>
     </div>
     </div>
     <h3 id="c2">知名彩繪藝師</h3>
     <!-- 北港昭烈宮 -->
-    <h4 id="choose04" >北港昭烈宮 </h4>
+    <h4 id="choose04">北港昭烈宮 </h4>
     <div class="temple2">
-        <div class="templep">
-
+        <div class="temple3">
             <P>
                 昭烈宮舊稱昭烈堂，耆老們慣稱昭烈宮為「陳聖王廟」或稱「聖王公廟」。
                 主祀開漳聖王，武安尊王、巧聖仙師、普庵仙師、荷葉仙師、關聖帝君、
@@ -204,51 +262,57 @@
                 之後因為地震坍塌後於民國十七年（1928年）倡議集資興建宗祠供奉，期間歷經數次重建才有現今規模。
             </P>
         </div>
-        <div class="templeimg">
+        <div class="temple4">
             <h4>廟宇正面</h4>
             <img src="picture/廟宇/朝烈宮.jpg">
         </div>
     </div>
-  
-    <div class="f">
 
-        <h4>地圖參考</h4>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9503448507244!2d120.30052967593885!3d23.570226795668372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ea2861c800d11%3A0x7f7a1223bb019516!2z5pit54OI5a6u!5e0!3m2!1szh-TW!2stw!4v1700202699787!5m2!1szh-TW!2stw"
-            width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map2">
+        <div class="map3">
+            <h4>地圖參考</h4>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9503448507244!2d120.30052967593885!3d23.570226795668372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ea2861c800d11%3A0x7f7a1223bb019516!2z5pit54OI5a6u!5e0!3m2!1szh-TW!2stw!4v1700202699787!5m2!1szh-TW!2stw"
+                width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map4">
+            <h4>延伸閱讀</h4>
+            <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
+        </div>
     </div>
- 
-
     <h4>北港武德宮 </h4>
     <div class="temple2" id="choose05">
-        <div class="templep">
+        <div class="temple3">
         </div>
         <P>
             臺灣五路武財神的信仰始於北港，而武德宮之肇建可追溯自創辦人陳茂霖先生，武德宮舊址為其開設的中藥行。為了求他意外昏迷的妻子早日恢復健康而求神拜佛，卻意外發現家中有內神，為財神爺趙公明，因此聽從指示在家裡設置了一個香爐每天虔誠祭拜，而妻子也不藥而癒。陳先生也為財神爺雕塑金身放置在中藥行內供人膜拜，而成為武德宮。
             <br>之後因為信徒眾多，沒辦法容納這麼多人，所以在民國69年遷到現在的地址。
 
         </P>
-        <div class="templeimg">
+        <div class="temple4">
             <h4>廟宇正面</h4>
             <img src="picture/廟宇/武德宮.jpg">
         </div>
     </div>
-   
-    <div class="f">
-        <h4>地圖參考</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.658709653255
+
+    <div class="map2">
+        <div>
+            <h4>地圖參考</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.658709653255
             8!2d120.29895780000001!3d23.580697999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768
             !4f13.1!3m3!1m2!1s0x346ea28ac1801b3f%3A0x6ca7caa53c5a80a0!2z5YyX5riv5q2m5b63
             5a6u!5e0!3m2!1szh-TW!2stw!4v1700202317216!5m2!1szh-TW!2stw" width="300" height="250" style="border:0;"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
     </div>
     <h3 id="c3">雕刻門神</h3>
     <!-- 北港復興宮 -->
     <h4>北港復興宮 </h4>
-    <div class="definition" id="choose06">
-        <div>
+    <div class="temple2" id="choose06">
+        <div class="temple3">
             <P>
                 北港復興宮，原名撫番。
                 主祀天上聖母，陳府千歲、池府千歲、保生大帝、福德正神、中壇元帥陪祀。</P>
@@ -260,45 +324,44 @@
                 其中一尊流至北港，朝天宮供奉著刻有「三槺榔二媽」之媽祖神像，一尊流至新港，另一尊則為復興宮之鎮殿媽。
             </P>
         </div>
-        <div>
+        <div class="temple4">
             <h4>廟宇正面</h4>
             <img src="picture/廟宇/復興宮.jpg">
         </div>
     </div>
-   
 
-        <div class="f">
 
-            <h4>地圖參考</h4>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.339038783002
+    <div class="map2">
+
+        <h4>地圖參考</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.339038783002
             3!2d120.31825027590124!3d23.59217079483127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
             4f13.1!3m3!1m2!1s0x346ea2dd8dec6f97%3A0x4419a2dbe4bc14a6!2z5YyX5riv5LiJ5qe65q
             aU5b6p6IiI5a6u!5e0!3m2!1szh-TW!2stw!4v1700202288470!5m2!1szh-TW!2stw" width="300" height="250"
-                style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
     </div>
     <h3 id="c4">扇門數量多寡</h3>
     <!-- 扶朝五福宮 -->
     <h4>扶朝五福宮 </h4>
-    <div class="definition" id="choose07">
-        <div>
-        <P>
-            扶朝五福宮創建於民國七十三年（1984年），屬於道教系統，五福宮主祀天遷五帝與玄天上
-            帝，福德正神、石千歲、閻羅天子、關聖帝君、註生娘娘陪祀在側。
-        </P>
-        <P>
-            民國六十八年（1979年）推崇蘇世傳先生為主事，籌募建廟。民國七十二年（1983年）甲子
-            孟夏子時，恭請諸位聖神進殿安座，並舉行祈安清醮大典。
-        </P>
+    <div class="temple2" id="choose07">
+        <div class="temple3">
+            <P>
+                扶朝五福宮創建於民國七十三年（1984年），屬於道教系統，五福宮主祀天遷五帝與玄天上
+                帝，福德正神、石千歲、閻羅天子、關聖帝君、註生娘娘陪祀在側。
+            </P>
+            <P>
+                民國六十八年（1979年）推崇蘇世傳先生為主事，籌募建廟。民國七十二年（1983年）甲子
+                孟夏子時，恭請諸位聖神進殿安座，並舉行祈安清醮大典。
+            </P>
         </div>
-        <div>
+        <div class="temple4">
             <h4>廟宇正面</h4>
             <img src="picture/廟宇/五福宮.jpg">
         </div>
     </div>
 
-    <div class="f">
+    <div class="map2">
         <h4>地圖參考</h4>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.232597452710
             3!2d120.2813738759007!3d23.560088296054886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
@@ -308,26 +371,26 @@
     </div>
     <h4>北港代天宮 </h4>
     <!-- 北港代天宮 -->
-    <div class="definition" id="choose08">
-        <div>
+    <div class="temple2" id="choose08">
+        <div class="temple3">
             <P>
-            北港代天宮主祀五府千歲，福德正神、註生娘娘、
-            城隍爺、中壇元帥、三寶佛、十六神千歲陪祀在側。
-        </P>
-        <P>
-            為臺南南鯤鯓代天府分靈而來，金身原本是寄寓於民間，但因為其神威顯赫，信徒日益漸增，所以地方仕紳鄭食先生倡議建廟。
-            於庚子年（1949年）農曆六月四日破土興工，至次年的農曆七月二十日峻工
-        </P>  
+                北港代天宮主祀五府千歲，福德正神、註生娘娘、
+                城隍爺、中壇元帥、三寶佛、十六神千歲陪祀在側。
+            </P>
+            <P>
+                為臺南南鯤鯓代天府分靈而來，金身原本是寄寓於民間，但因為其神威顯赫，信徒日益漸增，所以地方仕紳鄭食先生倡議建廟。
+                於庚子年（1949年）農曆六月四日破土興工，至次年的農曆七月二十日峻工
+            </P>
         </div>
-      
-        <div>
+
+        <div class="temple4">
             <h4>廟宇正面</h4>
             <img src="picture/廟宇/代天宮.jpg">
         </div>
     </div>
 
 
-    <div class="f">
+    <div class="map2">
         <h4>地圖參考</h4>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.908116130236
     !2d120.30200777590092!3d23.571743295610602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
@@ -335,36 +398,67 @@
     a6u!5e0!3m2!1szh-TW!2stw!4v1700202188686!5m2!1szh-TW!2stw" width="300" height="250" style="border:0;"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-  <h3 id="c5">雕刻門神</h3>
+    <h3 id="c5">雕刻門神</h3>
     <!-- 北港巡安宮臨水夫人廟 -->
     <h4>北港巡安宮臨水夫人廟 </h4>
     <div class="temple2" id="choose09">
-        <div class="templep">
+        <div class="temple3">
             <P>
                 自民國二十二年（1933年）臨水夫人陳靖姑初降，乩童陳玉蘭奉旨開始濟世
                 因為信徒愈來愈多。民國五十五年（1966年），信徒倡議建廟，一年後竣工，並命名為「巡安宮」。
                 相傳縣農會前曾鬧旱災就設壇求雨，不久甘霖四起，傳為佳話，因而香火鼎盛。
             </P>
         </div>
-        <div class="templeimg">
+        <div class="temple4">
             <h4>廟宇正面</h4>
             <img src="picture/廟宇/巡安宮.jpg">
         </div>
     </div>
-   
-    <div class="f">
-        <h4>地圖參考</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.7895445739387
-            !2d120.29438087590096!3d23.57600089544826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f
-            13.1!3m3!1m2!1s0x346ea26272e6a9a9%3A0xd5d0c1c16b749c14!2z5beh5a6J5a6u6Ieo5rC0
-            5aSr5Lq65buf!5e0!3m2!1szh-TW!2stw!4v1700202160069!5m2!1szh-TW!2stw" width="300" height="250"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="temple5">
+        <div>
+            <h5>巡安宮門神圖</h5>
+        </div>
+        <div id="carousel">
+            <div class="slide">
+                <img height="300px" src="picture/廟宇/廟宇圖/巡安宮/巡安宮-14.png" alt="Slide 1">
+                <p>宮娥</p>
+            </div>
+            <div class="slide">
+                <img height="300px" src="picture/廟宇/廟宇圖/巡安宮/巡安宮-13.png" alt="Slide 2">
+                <p>龍</p>
+            </div>
+            <div class="slide">
+                <img height="300px" src="picture/廟宇/廟宇圖/巡安宮/巡安宮-15.png" alt="Slide 3">
+                <p>太監</p>
+            </div>  
+        </div>
+        <div id="carousel">
+            <button onclick="prevSlide()">上一張</button>
+            <button onclick="nextSlide()">下一張</button>
+        </div>
+    </div>
+
+
+    <div class="map2">
+        <div class="map3">
+            <h4>地圖參考</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.7895445739387
+                !2d120.29438087590096!3d23.57600089544826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f
+                13.1!3m3!1m2!1s0x346ea26272e6a9a9%3A0xd5d0c1c16b749c14!2z5beh5a6J5a6u6Ieo5rC0
+                5aSr5Lq65buf!5e0!3m2!1szh-TW!2stw!4v1700202160069!5m2!1szh-TW!2stw" width="300" height="250"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map4">
+            <h4>延伸閱讀</h4>
+            <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
+        </div>
     </div>
     <h3 id="c6">佛教寺廟</h3>
     <!--  北壇碧水寺  -->
     <h4> 北壇碧水寺 </h4>
-    <div class="definition" id="choose10">
-        <div>
+    <div class="temple2" id="choose10">
+        <div class="temple3">
 
             <P>
                 北壇碧水寺創建於清嘉慶五年（1800年），主祀觀世音菩薩與大眾爺
@@ -376,13 +470,13 @@
                 買回碧水寺並重新整修，同年十月份神祇歸廟。
             </P>
         </div>
-        <div>
+        <div class="temple4">
             <h4>廟宇正面</h4>
             <img src="picture/廟宇/碧水寺.jpg">
         </div>
     </div>
-   
-    <div class="f">
+
+    <div class="map2">
         <h6>地圖參考</h6>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.559816017176!
             2d120.2974813759011!3d23.58424779513373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13
