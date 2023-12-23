@@ -310,8 +310,6 @@ body {
         margin: 30px auto;
         line-height: 2rem;
     }
-
-
     .doorgodimg {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -335,7 +333,7 @@ a {
 .shell {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     width: auto;
     height: auto;
     display: flex;
@@ -430,19 +428,6 @@ a {
 
 
 
-.f {
-    max-width: 800px;
-    min-width: 250px;
-    line-height: 50px;
-    margin: 100px auto;
-    padding: 20px 30px;
-    align-items: center;
-    background-color: #faf8f3;
-}
-
-.f p {
-    padding: 20px;
-}
 
 
 

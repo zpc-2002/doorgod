@@ -151,17 +151,16 @@
 .temple5 {
     padding: 20px;
     background-color: #fff;
- 
+
     margin: 60px 10%;
     grid-gap: 20px;
     align-items: center;
 }
+
 .temple6 {
-   align-items: center;
-   
+    align-items: center;
+
 }
-
-
 
 .map4 a {
     font-size: larger;
@@ -169,23 +168,138 @@
 }
 
 
-#carousel {
-    height: auto;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 1000px) {
+    .thumbnail-container {
+        width: auto;
+        background-color: #fff;
+        margin: 60px 20%;
+        align-items: center;
+        text-align: center;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 20px;
+    }
+    .thumbnail-container2 {
+        width: auto;
+        background-color: #fff;
+        margin: 60px 20%;
+        align-items: center;
+        text-align: center;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        padding: 20px;
+    }
+    .thumbnail-container5 {
+        width: auto;
+        background-color: #fff;
+        margin: 60px 20%;
+        align-items: center;
+        text-align: center;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        padding: 20px;
+    }
+
+    .thumbnail {
+        margin: 10px;
+        /* overflow: hidden; */
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+        align-items: center;
+        text-align: center;
+       
+    }
+
+    .thumbnail img {
+        width: auto;
+        max-height: 400px;
+        /* display: block; */
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .thumbnail:hover {
+        transform: scale(1.2);
+    }
 }
 
-.slide {
-    display: none;
-    text-align: center;
+
+
+
+@media (min-width: 1000px) {
+
+    .thumbnail-container {
+        display: flex;
+        width: auto;
+        margin: 60px 20%;
+        align-items: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: #fff;
+        padding: 20px;
+    }
+    .thumbnail-container2 {
+        width: auto;
+        background-color: #fff;
+        margin: 60px 20%;
+        align-items: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+    }
+    .thumbnail-container5 {
+        width: auto;
+        background-color: #fff;
+        margin: 60px 20%;
+        align-items: center;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        padding: 20px;
+    }
+
+
+    .thumbnail {
+        margin: 0 20px;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+        align-items: center;
+        text-align: center;
+    }
+
+    .thumbnail img {
+        width: auto;
+        height: 45vh;
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .thumbnail:hover {
+        transform: scale(1.2);
+    }
 }
-.temple5btn{
+
+
+.temple5btn {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* Add additional styles as needed */
+
+
+/* 回到廟宇選擇 */
+.back {
+    background-color: #eee;
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+    max-width: 100px;
+}

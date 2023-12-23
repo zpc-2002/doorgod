@@ -17,49 +17,81 @@
     <!-- AOS連結 -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script src="temple.js"></script> -->
 
     <title>門面擔當-廟宇介紹</title>
 </head>
 <script>
-    var currentSlide = 0;
 
-    function showSlide(index) {
-        var slides = document.querySelectorAll('.slide');
+    document.getElementById(`${carouselId}-nextButton`).addEventListener('click', nextSlide);
+    document.getElementById(`${carouselId}-prevButton`).addEventListener('click', prevSlide);
 
-        if (index >= slides.length) {
-            currentSlide = 0;
-        } else if (index < 0) {
-            currentSlide = slides.length - 1;
-        } else {
-            currentSlide = index;
+
+    function setupCarousel(carouselId) {
+        var currentSlide = 0;
+
+        function showSlide(index) {
+            var slides = document.querySelectorAll(`#${carouselId} .slide`);
+
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            slides.forEach(function (slide) {
+                slide.style.display = 'none';
+            });
+
+            slides[currentSlide].style.display = 'block';
         }
 
-        // Hide all slides
-        slides.forEach(function (slide) {
-            slide.style.display = 'none';
-        });
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
 
-        // Show the current slide
-        slides[currentSlide].style.display = 'block';
-    }
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
 
-    function nextSlide() {
-        showSlide(currentSlide + 1);
-    }
-
-    function prevSlide() {
-        showSlide(currentSlide - 1);
-    }
-
-    // Show the first slide when the page loads
-    document.addEventListener('DOMContentLoaded', function () {
         showSlide(0);
-    });
 
-    // You can also add event listeners for next and previous buttons
+        // You can also add event listeners for next and previous buttons if needed
+    }
+
+    // Initialize each carousel
+    document.addEventListener('DOMContentLoaded', function () {
+        setupCarousel('carousel1');
+        setupCarousel('carousel2');
+        // Add more if needed
+    });
 
 
 </script>
+
+<style>
+    .carousel {
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .carousel .slide {
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+    }
+</style>
 
 <body>
     <script>
@@ -135,6 +167,11 @@
             </ul>
         </li>
     </ul>
+
+    <div class="back">
+    
+        <button><a href="temple.html#map">回到廟宇選擇</a></button>
+    </div>
     <h2>廟宇介紹</h2>
 
     <h3 id="c1">具備文化資產身分</h3>
@@ -156,18 +193,78 @@
             <img src="picture/廟宇/朝天宮.jpg">
         </div>
     </div>
+   
+
+        <h4>朝天宮-三川殿門神</h4>
+        <div class="thumbnail-container">
+            <div class="thumbnail" id="thumbnail-2">
+                <img src="picture/廟宇/01朝天宮/三川殿/太監.jpg" alt="三川殿-太監">
+                <p>太監</p>
+            </div>
+            <div class="thumbnail" id="thumbnail-1">
+                <img src="picture/廟宇/01朝天宮/三川殿/四爪金龍.jpg" alt="三川殿-四爪金龍">
+                <p>四爪金龍</p>
+            </div>
+            <div class="thumbnail" id="thumbnail-3">
+                <img src="picture/廟宇/01朝天宮/三川殿/仕女.jpg" alt="三川殿-仕女">
+                <p>仕女</p>
+            </div>
+        </div>
+
+        <h4>朝天宮-凌虛殿門神</h4>
+        <div class="thumbnail-container">
+            <div class="thumbnail" id="thumbnail-5">
+                <img height="300px" src="picture/廟宇/01朝天宮/凌虛殿/十天干.jpg" alt="凌虛殿-十天干">
+                <p>十天干</p>
+            </div>
+            <div class="thumbnail" id="thumbnail-4">
+                <img height="300px" src="picture/廟宇/01朝天宮/凌虛殿/康應趙公明.jpg" alt="凌虛殿-康應趙公明">
+                <p>康應與趙公明</p>
+            </div>
+            <div class="thumbnail" id="thumbnail-6">
+                <img height="300px" src="picture/廟宇/01朝天宮/凌虛殿/十二地支.jpg" alt="凌虛殿-十二地支">
+                <p>十二地支</p>
+            </div>
+        </div>
+        <h4>朝天宮-聚奎閣門神</h4>
+        <div class="thumbnail-container">
+            <div class="thumbnail" id="thumbnail-5">
+                <img height="300px" src="picture/廟宇/01朝天宮/聚奎閣/二十四節氣1 (2).jpg" alt="聚奎閣-二十四節氣立春到大暑">
+                <p>二十四節氣-立春到大暑</p>
+            </div>
+            <div class="thumbnail" id="thumbnail-4">
+                <img height="300px" src="picture/廟宇/01朝天宮/聚奎閣/秦叔寶尉遲恭.jpg" alt="聚奎閣-秦叔寶尉遲恭">
+                <p>秦叔寶尉遲恭</p>
+            </div>
+            <div class="thumbnail" id="thumbnail-6">
+                <img height="300px" src="picture/廟宇/01朝天宮/聚奎閣/二十四節氣1 (3).jpg" alt="聚奎閣-二十四節氣立秋到大寒">
+                    <p>二十四節氣-立秋到大寒</p>
+            </div>
+        </div>
+        <h4>朝天宮-龍門、虎門門神</h4>
+        <div class="thumbnail-container2">
+            <div class="thumbnail" id="thumbnail-4">
+                <img height="300px" src="picture/廟宇/01朝天宮/龍門、虎門/東南.jpg" alt="龍門、虎門-東方持國天王南方增長天王 ">
+                <p>東方持國天王與南方增長天王</p>
+            </div>
+            <div class="thumbnail" id="thumbnail-5">
+                <img height="300px" src="picture/廟宇/01朝天宮/龍門、虎門/西北.jpg" alt="龍門、虎門-西方廣目天王北方多聞天王">
+                    <p>西方廣目天王與北方多聞天王</p>
+            </div>
+        
+        </div>
 
 
     <div class="map2">
         <div class="map3">
-            <h4>地圖參考</h4>
+            <h5>地圖參考</h5>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0109184627213!2d120.29985068583652!3d23.568051341092733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ea285b604f125%3A0x7a7c8b94e816afce!2z5YyX5riv5pyd5aSp5a6u!5e0!3m2!1szh-TW!2stw!4v1700202734294!5m2!1szh-TW!2stw"
                 width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="map4">
-            <h4>延伸閱讀</h4>
+            <h5>延伸閱讀</h5>
             <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
         </div>
 
@@ -177,7 +274,7 @@
     <h4 id="choose02">縣定古蹟北港鎮安宮 </h4>
     <div class="temple2">
         <div class="temple3">
-            <h4>鎮安宮簡介</h4>
+            <h5>鎮安宮簡介</h5>
             <p>
                 鎮安宮主祀七王爺、丁府八千歲及馬府千歲。
                 北港鎮安宮的發展跟北港菜氏移民有很大的關係，
@@ -190,28 +287,52 @@
             </P>
         </div>
         <div class="temple4">
-            <h4>廟宇正面</h4>
+            <h5>廟宇正面</h5>
             <img src="picture/廟宇/鎮安宮.jpg">
         </div>
     </div>
-
+    <div class="temple5">
+        <div>
+            <h5>鎮安宮門神圖</h5>
+        </div>
+        <div id="carousel2" class="carousel">
+            <div class="slide">
+                <img height="300px" src="picture/廟宇/02鎮安宮/秦叔寶、尉遲恭.jpg" alt="秦叔寶、尉遲恭">
+                <p>秦叔寶、尉遲恭</p>
+            </div>
+            <div class="slide">
+                <img height="300px" src="picture/廟宇/02鎮安宮/IMG_4901.JPG" alt="Slide 2">
+                <p>龍</p>
+            </div>
+            <div class="slide">
+                <img height="300px" src="picture/廟宇/02鎮安宮/IMG_5106.JPG" alt="Slide 3">
+                <p>太監</p>
+            </div>
+        </div>
+        <button onclick="prevSlide()">&lt;</button>
+        <button onclick="nextSlide()">&gt;</button>
+    </div>
     <div class="map2">
         <div class="map3">
-            <h4>地圖參考</h4>
+            <h5>地圖參考</h5>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0427655933136!2d120.3017982!3d23.566907500000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ea37388ce8c55%3A0x227171d29aba34a3!2z57ij5a6a5Y-k6Lmf5YyX5riv6Y6u5a6J5a6u!5e0!3m2!1szh-TW!2stw!4v1700202644499!5m2!1szh-TW!2stw"
                 width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="map4">
-            <h4>延伸閱讀</h4>
-            <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
+            <h5>延伸閱讀</h5>
+            <p align="center"><a href="https://www.facebook.com/sanyijing/?locale=zh_TW">北港鎮安宮官網臉書專頁</a></p>
+            <p align="center"><a
+                    href="https://memory.culture.tw/Home/Detail?Id=227197&IndexCode=Culture_Invisible">北港鎮安宮七王爺與瘟疫傳說</a>
+            </p>
         </div>
     </div>
     <!-- 縣定古蹟北港義民廟 -->
     <h4>縣定古蹟北港義民廟 </h4>
     <div class="temple2" id="choose03">
         <div class="temple3">
+            <h5>義民廟簡介</h5>
             <P>
                 北港義民廟為臺灣少數奉祀閩籍義民之廟宇，主祀義民公，創建於乾隆五十三年（1788年）。
             </P>
@@ -226,14 +347,14 @@
             </P>
         </div>
         <div class="temple4">
-            <h4>廟宇正面</h4>
-            <img src="picture/廟宇/">
+            <h5>廟宇正面</h5>
+            <img src="picture/廟宇/義民廟.jpg">
         </div>
     </div>
 
     <div class="map2">
         <div class="map3">
-            <h4>地圖參考</h4>
+            <h5>地圖參考</h5>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0200798624383
                 !2d120.30286409999998!3d23.567722300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4
                 f13.1!3m3!1m2!1s0x346ea28683fbaaf1%3A0x398782abc0bbd467!2z5YyX5riv576p5rCR5bu
@@ -242,7 +363,7 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="map4">
-            <h4>延伸閱讀</h4>
+            <h5>延伸閱讀</h5>
             <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
         </div>
     </div>
@@ -252,6 +373,7 @@
     <h4 id="choose04">北港昭烈宮 </h4>
     <div class="temple2">
         <div class="temple3">
+            <h5>昭烈宮簡介</h5>
             <P>
                 昭烈宮舊稱昭烈堂，耆老們慣稱昭烈宮為「陳聖王廟」或稱「聖王公廟」。
                 主祀開漳聖王，武安尊王、巧聖仙師、普庵仙師、荷葉仙師、關聖帝君、
@@ -263,42 +385,43 @@
             </P>
         </div>
         <div class="temple4">
-            <h4>廟宇正面</h4>
+            <h5>廟宇正面</h5>
             <img src="picture/廟宇/朝烈宮.jpg">
         </div>
     </div>
 
     <div class="map2">
         <div class="map3">
-            <h4>地圖參考</h4>
+            <h5>地圖參考</h5>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9503448507244!2d120.30052967593885!3d23.570226795668372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ea2861c800d11%3A0x7f7a1223bb019516!2z5pit54OI5a6u!5e0!3m2!1szh-TW!2stw!4v1700202699787!5m2!1szh-TW!2stw"
                 width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="map4">
-            <h4>延伸閱讀</h4>
+            <h5>延伸閱讀</h5>
             <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
         </div>
     </div>
     <h4>北港武德宮 </h4>
     <div class="temple2" id="choose05">
         <div class="temple3">
-        </div>
-        <P>
-            臺灣五路武財神的信仰始於北港，而武德宮之肇建可追溯自創辦人陳茂霖先生，武德宮舊址為其開設的中藥行。為了求他意外昏迷的妻子早日恢復健康而求神拜佛，卻意外發現家中有內神，為財神爺趙公明，因此聽從指示在家裡設置了一個香爐每天虔誠祭拜，而妻子也不藥而癒。陳先生也為財神爺雕塑金身放置在中藥行內供人膜拜，而成為武德宮。
-            <br>之後因為信徒眾多，沒辦法容納這麼多人，所以在民國69年遷到現在的地址。
+            <h5>武德宮簡介</h5>
+            <P>
+                臺灣五路武財神的信仰始於北港，而武德宮之肇建可追溯自創辦人陳茂霖先生，武德宮舊址為其開設的中藥行。為了求他意外昏迷的妻子早日恢復健康而求神拜佛，卻意外發現家中有內神，為財神爺趙公明，因此聽從指示在家裡設置了一個香爐每天虔誠祭拜，而妻子也不藥而癒。陳先生也為財神爺雕塑金身放置在中藥行內供人膜拜，而成為武德宮。
+                <br>之後因為信徒眾多，沒辦法容納這麼多人，所以在民國69年遷到現在的地址。
 
-        </P>
+            </P>
+        </div>
         <div class="temple4">
-            <h4>廟宇正面</h4>
+            <h5>廟宇正面</h5>
             <img src="picture/廟宇/武德宮.jpg">
         </div>
     </div>
 
     <div class="map2">
-        <div>
-            <h4>地圖參考</h4>
+        <div class="map3">
+            <h5>地圖參考</h5>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.658709653255
             8!2d120.29895780000001!3d23.580697999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768
             !4f13.1!3m3!1m2!1s0x346ea28ac1801b3f%3A0x6ca7caa53c5a80a0!2z5YyX5riv5q2m5b63
@@ -306,6 +429,11 @@
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
+        <div class="map4">
+            <h5>延伸閱讀</h5>
+            <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
+        </div>
+    </div>
 
     </div>
     <h3 id="c3">雕刻門神</h3>
@@ -313,6 +441,7 @@
     <h4>北港復興宮 </h4>
     <div class="temple2" id="choose06">
         <div class="temple3">
+            <h5>復興宮簡介</h5>
             <P>
                 北港復興宮，原名撫番。
                 主祀天上聖母，陳府千歲、池府千歲、保生大帝、福德正神、中壇元帥陪祀。</P>
@@ -325,27 +454,33 @@
             </P>
         </div>
         <div class="temple4">
-            <h4>廟宇正面</h4>
+            <h5>廟宇正面</h5>
             <img src="picture/廟宇/復興宮.jpg">
         </div>
     </div>
 
 
     <div class="map2">
-
-        <h4>地圖參考</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.339038783002
+        <div class="map3">
+            <h5>地圖參考</h5>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.339038783002
             3!2d120.31825027590124!3d23.59217079483127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
             4f13.1!3m3!1m2!1s0x346ea2dd8dec6f97%3A0x4419a2dbe4bc14a6!2z5YyX5riv5LiJ5qe65q
             aU5b6p6IiI5a6u!5e0!3m2!1szh-TW!2stw!4v1700202288470!5m2!1szh-TW!2stw" width="300" height="250"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map4">
+            <h5>延伸閱讀</h5>
+            <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
+        </div>
     </div>
     <h3 id="c4">扇門數量多寡</h3>
     <!-- 扶朝五福宮 -->
     <h4>扶朝五福宮 </h4>
     <div class="temple2" id="choose07">
         <div class="temple3">
+            <h5>五福宮簡介</h5>
             <P>
                 扶朝五福宮創建於民國七十三年（1984年），屬於道教系統，五福宮主祀天遷五帝與玄天上
                 帝，福德正神、石千歲、閻羅天子、關聖帝君、註生娘娘陪祀在側。
@@ -356,23 +491,31 @@
             </P>
         </div>
         <div class="temple4">
-            <h4>廟宇正面</h4>
+            <h5>廟宇正面</h5>
             <img src="picture/廟宇/五福宮.jpg">
         </div>
     </div>
 
     <div class="map2">
-        <h4>地圖參考</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.232597452710
+        <div class="map3">
+            <h5>地圖參考</h5>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.232597452710
             3!2d120.2813738759007!3d23.560088296054886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
             4f13.1!3m3!1m2!1s0x346e989cecac03a1%3A0x369530aace1eca4b!2z5YyX5riv5om25pyd6
             YeM5LqU56aP5a6u!5e0!3m2!1szh-TW!2stw!4v1700202251167!5m2!1szh-TW!2stw" width="300" height="250"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map4">
+            <h5>延伸閱讀</h5>
+            <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
+        </div>
     </div>
     <h4>北港代天宮 </h4>
     <!-- 北港代天宮 -->
     <div class="temple2" id="choose08">
         <div class="temple3">
+            <h5>代天宮簡介</h5>
             <P>
                 北港代天宮主祀五府千歲，福德正神、註生娘娘、
                 城隍爺、中壇元帥、三寶佛、十六神千歲陪祀在側。
@@ -382,27 +525,34 @@
                 於庚子年（1949年）農曆六月四日破土興工，至次年的農曆七月二十日峻工
             </P>
         </div>
-
         <div class="temple4">
-            <h4>廟宇正面</h4>
+            <h5>廟宇正面</h5>
             <img src="picture/廟宇/代天宮.jpg">
         </div>
     </div>
 
 
     <div class="map2">
-        <h4>地圖參考</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.908116130236
-    !2d120.30200777590092!3d23.571743295610602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
-    4f13.1!3m3!1m2!1s0x346ea28f6aa2fdd3%3A0x5473d8cfd5f14126!2z5YyX5riv5Luj5aSp5
-    a6u!5e0!3m2!1szh-TW!2stw!4v1700202188686!5m2!1szh-TW!2stw" width="300" height="250" style="border:0;"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map3">
+
+            <h5>地圖參考</h5>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.908116130236
+            !2d120.30200777590092!3d23.571743295610602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!
+            4f13.1!3m3!1m2!1s0x346ea28f6aa2fdd3%3A0x5473d8cfd5f14126!2z5YyX5riv5Luj5aSp5
+            a6u!5e0!3m2!1szh-TW!2stw!4v1700202188686!5m2!1szh-TW!2stw" width="300" height="250" style="border:0;"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map4">
+            <h5>延伸閱讀</h5>
+            <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
+        </div>
     </div>
     <h3 id="c5">雕刻門神</h3>
     <!-- 北港巡安宮臨水夫人廟 -->
     <h4>北港巡安宮臨水夫人廟 </h4>
     <div class="temple2" id="choose09">
         <div class="temple3">
+            <h5>巡安宮簡介</h5>
             <P>
                 自民國二十二年（1933年）臨水夫人陳靖姑初降，乩童陳玉蘭奉旨開始濟世
                 因為信徒愈來愈多。民國五十五年（1966年），信徒倡議建廟，一年後竣工，並命名為「巡安宮」。
@@ -410,38 +560,15 @@
             </P>
         </div>
         <div class="temple4">
-            <h4>廟宇正面</h4>
+            <h5>廟宇正面</h5>
             <img src="picture/廟宇/巡安宮.jpg">
-        </div>
-    </div>
-    <div class="temple5">
-        <div>
-            <h5>巡安宮門神圖</h5>
-        </div>
-        <div id="carousel">
-            <div class="slide">
-                <img height="300px" src="picture/廟宇/廟宇圖/巡安宮/巡安宮-14.png" alt="Slide 1">
-                <p>宮娥</p>
-            </div>
-            <div class="slide">
-                <img height="300px" src="picture/廟宇/廟宇圖/巡安宮/巡安宮-13.png" alt="Slide 2">
-                <p>龍</p>
-            </div>
-            <div class="slide">
-                <img height="300px" src="picture/廟宇/廟宇圖/巡安宮/巡安宮-15.png" alt="Slide 3">
-                <p>太監</p>
-            </div>  
-        </div>
-        <div id="carousel">
-            <button onclick="prevSlide()">上一張</button>
-            <button onclick="nextSlide()">下一張</button>
         </div>
     </div>
 
 
     <div class="map2">
         <div class="map3">
-            <h4>地圖參考</h4>
+            <h5>地圖參考</h5>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.7895445739387
                 !2d120.29438087590096!3d23.57600089544826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f
                 13.1!3m3!1m2!1s0x346ea26272e6a9a9%3A0xd5d0c1c16b749c14!2z5beh5a6J5a6u6Ieo5rC0
@@ -450,7 +577,7 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="map4">
-            <h4>延伸閱讀</h4>
+            <h5>延伸閱讀</h5>
             <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
         </div>
     </div>
@@ -459,7 +586,7 @@
     <h4> 北壇碧水寺 </h4>
     <div class="temple2" id="choose10">
         <div class="temple3">
-
+            <h5>碧水寺簡介</h5>
             <P>
                 北壇碧水寺創建於清嘉慶五年（1800年），主祀觀世音菩薩與大眾爺
                 在清朝時期台灣匪寇猖獗，鎮民自組義民軍防衛。為紀念義勇，地方人士增置大眾爺加以奉祀。
@@ -471,19 +598,25 @@
             </P>
         </div>
         <div class="temple4">
-            <h4>廟宇正面</h4>
+            <h5>廟宇正面</h5>
             <img src="picture/廟宇/碧水寺.jpg">
         </div>
     </div>
 
     <div class="map2">
-        <h6>地圖參考</h6>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.559816017176!
+        <div class="map3">
+
+            <h5>地圖參考</h5>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.559816017176!
             2d120.2974813759011!3d23.58424779513373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13
             .1!3m3!1m2!1s0x346ea2f5036e20eb%3A0xe2d5244d22c6fb8e!2z5YyX5aOH56Kn5rC05a-6!5
             e0!3m2!1szh-TW!2stw!4v1700202119613!5m2!1szh-TW!2stw" width="300" height="250" style="border:0;"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="map4">
+            <h5>延伸閱讀</h5>
+            <p align="center"><a href="http://www.matsu.org.tw/">北港朝天宮官網</a></p>
+        </div>
     </div>
 
     <!-- 右 -->

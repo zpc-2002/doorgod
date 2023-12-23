@@ -26,7 +26,49 @@
             duration: 1500.
         });
     </script>
- 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+  let text = document.getElementById('text');
+  let door01 = document.getElementById('door01');
+  let door02 = document.getElementById('door02');
+
+  let lastScrollY = 0;
+
+  function updateParallax() {
+      let scrollY = window.scrollY;
+      let deltaY = scrollY - lastScrollY;
+
+      // Apply parallax effect using transform
+      // text.style.transform = `translateY(${scrollY * 0.5}px)`;
+      door01.style.transform = `translateX(${scrollY * 2}px)`;
+      door02.style.transform = `translateX(${-scrollY * 2}px)`;
+
+      lastScrollY = scrollY;
+
+      // Request the next animation frame
+      requestAnimationFrame(updateParallax);
+  }
+
+  // Initial call to set the starting scroll position
+  updateParallax();
+
+  // Optional: Add a debounce function to reduce the frequency of scroll events
+  function debounce(func, wait) {
+      let timeout;
+      return function () {
+          clearTimeout(timeout);
+          timeout = setTimeout(func, wait);
+      };
+  }
+
+  // Use the debounce function to reduce the frequency of scroll events
+  let debouncedUpdateParallax = debounce(updateParallax, 16);
+  window.addEventListener('scroll', debouncedUpdateParallax);
+});
+
+
+
+  </script>
  <ul class="shell">
     <li class="button">
         <span><a href="index.html">首頁</a></span>

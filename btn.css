@@ -7,7 +7,7 @@ button {
     padding: 0.5em 1em;
     outline: none;
     border: none;
-    background-color: hsl(236, 32%, 26%);
+    background-color: #364f63;
 }
 
 button::before {
