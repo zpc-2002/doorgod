@@ -8,6 +8,10 @@
         grid-template-rows: 1fr 1fr;
         margin: 60px 10%;
         grid-gap: 20px;
+
+        
+        justify-items: center; /* 在主轴上居中 */
+    
     }
 
     .temple3 {
@@ -58,6 +62,10 @@
         grid-template-rows: 1fr 1fr 1fr;
         margin: 60px 10%;
         grid-gap: 20px;
+
+        
+        justify-items: center; /* 在主轴上居中 */
+     
     }
 
     .temple3 {
@@ -101,7 +109,7 @@
 
 
 
-@media (min-width: 1101px) {
+@media (min-width: 1200px) {
 
     .temple2 {
         padding: 20px;
@@ -110,6 +118,10 @@
         grid-template-columns: 1fr 1fr;
         margin: 60px 10%;
         grid-gap: 20px;
+
+        
+        justify-items: center; /* 在主轴上居中 */
+    
     }
 
     .temple3 {
@@ -131,6 +143,9 @@
         grid-template-columns: 1fr 1fr;
         margin: 60px 10%;
         grid-gap: 20px;
+        justify-items: center;
+        align-items: center;  
+        
     }
 
     .map3 {
@@ -168,7 +183,7 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     .thumbnail-container {
         width: auto;
         background-color: #fff;
@@ -227,38 +242,44 @@
 
 
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
 
     .thumbnail-container {
         display: flex;
         width: auto;
-        margin: 60px 20%;
+        margin: 60px 10%;
         align-items: center;
         text-align: center;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         background-color: #fff;
         padding: 20px;
+
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
+
     }
     .thumbnail-container2 {
         width: auto;
         background-color: #fff;
-        margin: 60px 20%;
-        align-items: center;
+        margin: 60px 10%;
         text-align: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 20px;
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
     }
     .thumbnail-container5 {
         width: auto;
         background-color: #fff;
-        margin: 60px 20%;
-        align-items: center;
+        margin: 60px 5%;
         text-align: center;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         padding: 20px;
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
     }
 
 
@@ -267,7 +288,8 @@
         overflow: hidden;
         position: relative;
         transition: transform 0.3s ease-in-out;
-        align-items: center;
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
         text-align: center;
     }
 

@@ -9,7 +9,7 @@
    }
 
    .headerp {
-       padding-top:10%;
+       padding-top: 10%;
        text-align: center;
        color: #fff;
        text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
@@ -40,22 +40,24 @@
        height: 100%;
        /* max-height: 800px; */
        pointer-events: none;
+       max-width: 600px;
    }
 
 
    .f {
-
-       position: relative;
-       background: #003329;
+       padding: 50px 10px;
+       margin: 60px auto;
+       background: #fff;
        padding: 100px;
+       max-width: 800px;
+       min-width: 250px;
+       border-radius: 15px;
 
    }
 
    .f p {
-       font-size: 1em;
-       color: #fff;
+       margin: 50px auto;
        font-weight: 300;
-
    }
 
    /* 文字大小 */
