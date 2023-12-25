@@ -28,6 +28,8 @@ body {
         max-width: 800px;
         min-width: 250px;
         padding: 20px;
+        height: 90vh;
+    
     }
 
     .indexbtn img {
@@ -83,12 +85,12 @@ body {
     .indexbtn {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-
         margin: 100px auto;
         align-items: center;
         max-width: 800px;
         min-width: 250px;
         padding: 20px;
+        height: 90vh;
     }
 
     .indexbtn img {
@@ -142,12 +144,12 @@ body {
     .indexbtn {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-
         margin: 100px auto;
         align-items: center;
         max-width: 800px;
         min-width: 250px;
         padding: 20px;
+        height: 90vh;
     }
 
     .indexbtn img {
