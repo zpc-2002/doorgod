@@ -132,7 +132,8 @@ body {
     .definitionimg {
         margin: 100px auto;
         display: grid;
-        align-items: center;
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
     }
 
 }
@@ -187,6 +188,8 @@ body {
         margin: 100px 10%;
         grid-template-rows: 1fr 1fr;
         align-items: center;
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
     }
 
     .definitionimg img {
@@ -209,6 +212,8 @@ body {
         display: grid;
         grid-template-rows: 1fr 1fr;
         margin: 10%;
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
     }
 
     .doorgod p {
@@ -227,7 +232,17 @@ body {
 
     .doorgod02 {
         grid-row: 2/3;
+       
     }
+    .doorgodimg {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin: 10%;
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
+    }
+ 
+
 }
 @media (max-width: 750px)and (min-width: 650px) {
     .doorgod {
@@ -235,6 +250,8 @@ body {
         display: grid;
         grid-template-rows: 1fr 2fr;
         margin: 10%;
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
     }
 
     .doorgod p {
@@ -253,6 +270,14 @@ body {
 
     .doorgod02 {
         grid-row: 2/6;
+       
+    }
+    .doorgodimg {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin: 10%;
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
     }
 }
 
@@ -262,6 +287,8 @@ body {
         display: grid;
         grid-template-rows: 2fr 4fr;
         margin: 10%;
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
     }
 
     .doorgod p {
@@ -280,13 +307,15 @@ body {
 
     .doorgod02 {
         grid-row: 2/6;
+
     }
 
     .doorgodimg {
         display: grid;
         grid-template-rows: 1fr 1fr;
         margin: 10%;
-
+        justify-items: center; /* 在主轴上居中 */
+        align-items: center;   /* 在交叉轴上居中 */
     }
 }
 
