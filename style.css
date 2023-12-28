@@ -423,6 +423,7 @@ a {
 .button li:hover {
     background-color: #FFD07A;
     justify-content: center;
+    text-decoration: none;
 }
 
 .button ul li {
@@ -433,9 +434,9 @@ a {
     background-color: #364F63;
     margin: 0 10px;
     color: #fff;
-    text-decoration: none;
     display: flex;
     justify-content: center;
+    text-decoration: none;
 }
 
 .button a {
