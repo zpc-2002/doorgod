@@ -18,6 +18,12 @@ body {
     margin: 5% 20%;
 }
 
+audio{
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+
 /* 釋義 */
 @media (min-width: 320px)and (max-width: 699px) {
     .indexbtn {
@@ -369,16 +375,17 @@ a {
     height: auto;
     display: flex;
     padding: auto 10px;
-    background-color: #bb4120;
+    background-color: #287b83;
     margin: auto;
     justify-content: center;
+    text-decoration: none;
 
 }
 
 
 .button,
 .portrait {
-    background-color: #bb4120;
+    background-color: #287b83;
     width: 170px;
     height: 65px;
     text-align: center;
@@ -386,6 +393,8 @@ a {
     transition: .3s;
     cursor: pointer;
     justify-content: center;
+    text-decoration: none;
+
 }
 
 .portrait::before {
@@ -416,8 +425,9 @@ a {
 }
 
 .button:hover {
-    background-color: #bb4120;
+    background-color: #FFD07A;
     justify-content: center;
+    text-decoration: none;
 }
 
 .button li:hover {
@@ -433,7 +443,7 @@ a {
     transform: translateY(-65px);
     background-color: #364F63;
     margin: 0 10px;
-    color: #fff;
+    color: #364F63;
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -449,6 +459,7 @@ a {
     opacity: 1;
     transform: translateY(0);
     display: flex;
+    text-decoration: none;
 }
 
 .portrait:hover .information {
